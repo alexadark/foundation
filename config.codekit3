@@ -1246,6 +1246,14 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/assets/js/selectric.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/js/selectric.min.js.map",
+		"oF": 0
+		},
 	"/assets/js/slick.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -4689,7 +4697,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888/ross/",
+	"externalServerAddress": "http://ross-simmonds",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
