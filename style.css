@@ -3639,13 +3639,15 @@ div.gfield_creditcard_warning_message {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-          flex-flow: row wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between; }
+  @media only screen and (max-width: 1010px) {
+    .small-posts-wrapper,
+    .category .posts-wrapper,
+    .author .posts-wrapper {
+      -webkit-flex-wrap: wrap;
+              flex-wrap: wrap; } }
 
 .tease-post--small,
 .category .tease-post {

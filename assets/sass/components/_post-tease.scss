@@ -160,7 +160,11 @@
 .small-posts-wrapper,
 .category .posts-wrapper,
 .author .posts-wrapper {
-	@include flexbox;
+	display: flex;
+	justify-content: space-between;
+	@include max-screen(1010px) {
+		flex-wrap: wrap;
+	}
 }
 .tease-post--small,
 .category .tease-post {
