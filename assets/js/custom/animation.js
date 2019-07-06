@@ -201,18 +201,18 @@ const servicesScene = new ScrollMagic.Scene({
 
 //Macbook
 
-const macBook = CSSRulePlugin.getRule('.home .resources:before');
-const macBookTween = new TweenMax.fromTo(
-	macBook,
-	2,
-	{ cssRule: { y: 100 } },
-	{ cssRule: { y: 0 } }
-);
-const macBookScene = new ScrollMagic.Scene({
-	triggerElement: '.home .resources',
-	triggerHook: 1,
-	offset: 200,
-})
-	.setTween(macBookTween)
-	.addIndicators()
-	.addTo(controller);
+// const macBook = CSSRulePlugin.getRule('.home .resources:before');
+// const macBookTween = new TweenMax.fromTo(
+// 	macBook,
+// 	2,
+// 	{ cssRule: { y: 100 } },
+// 	{ cssRule: { y: 0 } }
+// );
+// const macBookScene = new ScrollMagic.Scene({
+// 	triggerElement: '.home .resources',
+// 	triggerHook: 1,
+// 	offset: 200,
+// })
+// 	.setTween(macBookTween)
+// 	.addIndicators()
+// 	.addTo(controller);

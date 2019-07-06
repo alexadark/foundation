@@ -3004,7 +3004,11 @@ div.gfield_creditcard_warning_message {
   border: none;
   background: #ffeae1;
   position: relative;
-  padding: 0 50px 0 20px; }
+  padding: 0 50px 0 20px;
+  border-radius: 3px;
+  margin-bottom: 3px; }
+  .lab__dd--cats .selectric {
+    padding: 0 120px 0 20px; }
 
 .selectric .label {
   display: block;
@@ -3141,6 +3145,8 @@ div.gfield_creditcard_warning_message {
 .selectric-items .selectric-scroll {
   height: 100%;
   overflow: auto; }
+  .selectric-items .selectric-scroll li:first-child {
+    border-radius: 3px; }
 
 .selectric-above .selectric-items {
   top: auto;

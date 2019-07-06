@@ -7,7 +7,7 @@
 	cursor: pointer;
 	margin-left: 0;
 	@include min-screen($s) {
-		margin-left:10px;
+		margin-left: 10px;
 	}
 }
 
@@ -20,6 +20,11 @@
 	background: $light-pink;
 	position: relative;
 	padding: 0 50px 0 20px;
+	border-radius: 3px;
+	margin-bottom: 3px;
+	.lab__dd--cats & {
+		padding: 0 120px 0 20px;
+	}
 }
 
 .selectric .label {
@@ -176,8 +181,10 @@
 .selectric-items .selectric-scroll {
 	height: 100%;
 	overflow: auto;
-	li:first-child{
+
+	li:first-child {
 		//display: none;
+		border-radius: 3px;
 	}
 }
 
@@ -259,5 +266,3 @@
 .selectric-items .selectric-group li {
 	padding-left: 25px;
 }
-
-//TODO: fix width, height, double title and opening only to down,
