@@ -320,7 +320,7 @@ function fnd_cancel_subscription_function(){
 }
 
 //user can cancel subscription
-add_action( 'gform_after_submission_16', 'fnd_cancel_subscription', 10, 2 );
+add_action( 'gform_after_submission_15', 'fnd_cancel_subscription', 10, 2 );
 function fnd_cancel_subscription( $entry, $form ) {
  if( isset($_REQUEST["plan"]) && $_REQUEST[""]!="plan" ){
 	  //get original current users entry id from form 2. NOT this entry id!
