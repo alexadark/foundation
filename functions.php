@@ -158,6 +158,9 @@ if (function_exists('acf_add_options_page')) {
 
 new StarterSite();
 
+//hide admin bar from all user
+show_admin_bar( false );
+
 //auto login after register and redirect to the corresponding class
 add_action( 'gform_user_registered', 'wpc_gravity_registration_autologin',  999, 4 );
 /**
