@@ -2,7 +2,7 @@
 //Template name: Account info
 $context   = Timber::get_context();
 $templates = array('account-info.twig');
-current_user = wp_get_current_user();
+$current_user = wp_get_current_user();
 $context['successmessage'] ="";
 if(isset($_REQUEST["success"]) && $_REQUEST["success"]==1){
 	$context['successmessage'] ="Your Information is successfully saved";
