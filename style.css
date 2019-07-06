@@ -4381,11 +4381,17 @@ div.gfield_creditcard_warning_message {
         top: -85px; } }
 
 .blockquote2 {
-  padding: 100px 0;
+  padding: 0 0 100px;
   color: #faf5ef; }
+  @media only screen and (min-width: 1180px) {
+    .blockquote2 {
+      padding: 100px 0; } }
   .blockquote2 .wrapper {
-    max-width: 614px;
+    max-width: 500px;
     position: relative; }
+    @media only screen and (min-width: 1180px) {
+      .blockquote2 .wrapper {
+        max-width: 614px; } }
     @media only screen and (min-width: 1024px) {
       .blockquote2 .wrapper:before {
         content: '';
