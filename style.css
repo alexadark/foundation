@@ -2603,12 +2603,31 @@ div.gfield_creditcard_warning_message {
   .services-page .featured-sites__title {
     margin-top: 106px; } }
 
+@media only screen and (min-width: 1024px) and (max-width: 960px) {
+  .services-page .text-image.inverse-order {
+    padding-top: 50px; } }
+
 .services-page .featured-sites {
   margin-top: -106px;
   padding-top: 106px; }
+  .services-page .featured-sites.curve-black {
+    padding-top: 0;
+    padding-bottom: 0; }
+    @media only screen and (min-width: 960px) {
+      .services-page .featured-sites.curve-black {
+        padding-top: 100px; } }
+    .services-page .featured-sites.curve-black .featured-sites__title {
+      margin-top: 0; }
 
 .services-page .hero {
   padding-bottom: 25px; }
+
+.services-page .blockquote2.second {
+  padding-top: 150px; }
+  @media only screen and (max-width: 960px) {
+    .services-page .blockquote2.second {
+      padding-top: 80px;
+      padding-bottom: 50px; } }
 
 .error404 {
   background: #21232b; }

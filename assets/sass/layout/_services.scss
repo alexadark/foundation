@@ -5,13 +5,35 @@
 		}
 		.text-image {
 			// padding-top: 0;
+			&.inverse-order {
+				@include max-screen(960px) {
+					padding-top: 50px;
+				}
+			}
 		}
 	}
 	.featured-sites {
 		margin-top: -106px;
 		padding-top: 106px;
+		&.curve-black {
+			@include min-screen(960px) {
+				padding-top: 100px;
+			}
+			padding-top: 0;
+			padding-bottom: 0;
+			.featured-sites__title {
+				margin-top: 0;
+			}
+		}
 	}
 	.hero {
 		padding-bottom: 25px;
+	}
+	.blockquote2.second {
+		padding-top: 150px;
+		@include max-screen(960px) {
+			padding-top: 80px;
+			padding-bottom: 50px;
+		}
 	}
 }
