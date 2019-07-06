@@ -2512,7 +2512,7 @@ body {
 
 .page-template-account .gform_wrapper
 li.gfield.gfield_creditcard_warning
-div.gfield_creditcard_warning_message {
+div.gfield_creditcard_warning_message, .update-accnt-info-form {
   display: none; }
 
 .page-template-account .gform_wrapper li.gfield.gfield_creditcard_warning {
