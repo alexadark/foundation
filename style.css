@@ -2812,6 +2812,18 @@ div.gfield_creditcard_warning_message {
 .careers-page .hero {
   padding-bottom: 160px; }
 
+@media only screen and (max-width: 768px) {
+  .industries-page .text-image.first {
+    padding: 50px 0 10px; } }
+
+@media only screen and (max-width: 480px) {
+  .industries-page .image-block {
+    padding-bottom: 100px; } }
+
+@media only screen and (max-width: 480px) {
+  .industries-page .benefits__item:last-child {
+    margin-bottom: 120px; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
