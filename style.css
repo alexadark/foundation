@@ -2322,6 +2322,10 @@ body {
   max-width: 850px;
   margin: 25px auto 0; }
 
+@media only screen and (max-width: 480px) {
+  .research-page .steps.first {
+    padding-bottom: 10px; } }
+
 .research-page .cta-button {
   margin-top: -100px; }
 
@@ -2336,6 +2340,10 @@ body {
 
 .research-page .text-image {
   padding-top: 45px; }
+
+@media only screen and (max-width: 480px) {
+  .research-page .resources {
+    padding-bottom: 100px; } }
 
 .agency-page .hero,
 .industries-page .hero {
