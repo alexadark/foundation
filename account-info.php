@@ -33,6 +33,7 @@ if( 0 != $current_user->ID ){
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
 	}
+	$fnd_entry_id = get_user_meta($current_user->ID, 'fnd_entry_id',true);
 	if( $fnd_entry_id!="" ){
 		$context['no_subscription'] = false;
 	} else {
