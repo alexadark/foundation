@@ -2,7 +2,7 @@
 //Template name: Account info
 $context   = Timber::get_context();
 $templates = array('account-info.twig');
-current_user = wp_get_current_user();
+$current_user = wp_get_current_user();
 $context['successmessage'] ="";
 if(isset($_REQUEST["success"]) && $_REQUEST["success"]==1){
 	$context['successmessage'] ="Your Information is successfully saved";
@@ -25,13 +25,19 @@ if( 0 != $current_user->ID ){
 		$context['upgrade_plan_id'] = 2;
 		$context['upgrade_text'] = "If you change your plan you will be billed yearly instead of monthly. Saving $20/yr";
 		$context['active_plan_info'] = "PLAN 1 - $10/mo";
-		$context['upgradee_plan_info'] = "PLAN 2 - $100/yr";
+		$context['upgrade_plan_info'] = "PLAN 2 - $100/yr";
 	} else {
 		$context['paid_plan_id'] = 2;
 		$context['upgrade_plan_id'] = 1;
 		$context['upgrade_text'] = "If you change your plan you will be billed monthly instead of yearly.";
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
+	}
+	$fnd_entry_id = get_user_meta($current_user->ID, 'fnd_entry_id',true);
+	if( $fnd_entry_id!="" ){
+		$context['no_subscription'] = false;
+	} else {
+		$context['no_subscription'] = true;
 	}
 	$context['cancel_link'] = site_url('/cancel-subscription/?plan=plan'.$context['paid_plan_id']);
 	$context['upgrade_link'] = site_url('/upgrade-subscription/?plan=plan'.$context['upgrade_plan_id']);

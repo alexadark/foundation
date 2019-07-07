@@ -2540,7 +2540,7 @@ body {
 
 .page-template-account .gform_wrapper
 li.gfield.gfield_creditcard_warning
-div.gfield_creditcard_warning_message {
+div.gfield_creditcard_warning_message, .update-accnt-info-form {
   display: none; }
 
 .page-template-account .gform_wrapper li.gfield.gfield_creditcard_warning {
@@ -5081,7 +5081,7 @@ select:-webkit-autofill:focus {
   color: #faf5ef; }
   .wrapper.login-wrapper a {
     color: #246fc9; }
-
+.upgrade-booking.no-content{background: #faf5ef;}
 .account-lb {
   height: 0;
   opacity: 0;
