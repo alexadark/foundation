@@ -5016,7 +5016,7 @@ select:-webkit-autofill:focus {
   color: #faf5ef; }
   .wrapper.login-wrapper a {
     color: #246fc9; }
-
+.upgrade-booking.no-content{background: #faf5ef;}
 .account-lb {
   height: 0;
   opacity: 0;

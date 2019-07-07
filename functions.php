@@ -76,8 +76,6 @@ class StarterSite extends Timber\Site
 				);
 			}
 		endforeach;
-		
-
 	}
 	/** This is where you add some context
 	 *
