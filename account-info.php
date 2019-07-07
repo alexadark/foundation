@@ -25,7 +25,7 @@ if( 0 != $current_user->ID ){
 		$context['upgrade_plan_id'] = 2;
 		$context['upgrade_text'] = "If you change your plan you will be billed yearly instead of monthly. Saving $20/yr";
 		$context['active_plan_info'] = "PLAN 1 - $10/mo";
-		$context['upgradee_plan_info'] = "PLAN 2 - $100/yr";
+		$context['upgrade_plan_info'] = "PLAN 2 - $100/yr";
 	} else {
 		$context['paid_plan_id'] = 2;
 		$context['upgrade_plan_id'] = 1;
@@ -33,6 +33,7 @@ if( 0 != $current_user->ID ){
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
 	}
+	
 	$context['cancel_link'] = site_url('/cancel-subscription/?plan=plan'.$context['paid_plan_id']);
 	$context['upgrade_link'] = site_url('/upgrade-subscription/?plan=plan'.$context['upgrade_plan_id']);
 	$context['logout_url'] =  wp_logout_url( home_url() );

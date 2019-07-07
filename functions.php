@@ -327,25 +327,23 @@ add_action( 'gform_after_submission_15', 'fnd_cancel_subscription', 10, 2 );
 function fnd_cancel_subscription( $entry, $form ) {
  if( isset($_REQUEST["plan"]) && $_REQUEST[""]!="plan" ){
 	  //get original current users entry id from form 2. NOT this entry id!
-	  $entry_id = get_user_meta(get_current_user_id(), 'fnd_entry_id', true);
-	 
+	  $user_id = get_current_user_id();
+	  $entry_id = get_user_meta( $user_id, 'fnd_entry_id', true);
 	  //now cancel that entry's subscription
 	  $old_entry = GFAPI::get_entry( $entry_id );
-	  $feed = is_wp_error( $old_entry ) || ! function_exists( 'gf_stripe' ) ? false : gf_stripe()->get_payment_feed( $entry );
+	  $feed = is_wp_error( $old_entry ) || ! function_exists( 'gf_stripe' ) ? false : gf_stripe()->get_payment_feed( $old_entry );
 	 
-	  if ( is_array( $feed ) && rgar( $feed, 'addon_slug' ) == 'gravityformsstripe' && gf_stripe()->cancel( $entry, $feed ) ) {
-	    gf_stripe()->cancel_subscription( $old_entry, $feed );
-	    
-	   //destroy old entry id so they cant cancel twice... not sure its necessary
-	   update_user_meta(get_current_user_id(), 'fnd_entry_id', '');
+	  if ( is_array( $feed ) && rgar( $feed, 'addon_slug' ) == 'gravityformsstripe' && gf_stripe()->cancel( $old_entry, $feed ) ) {
+		    gf_stripe()->cancel_subscription( $old_entry, $feed );
+		    
+		   //destroy old entry id so they cant cancel twice... not sure its necessary
+		   update_user_meta($user_id, 'fnd_entry_id', '');
 
-	   //set meta to unsubscribed till period ends. in limbo state
-	   update_user_meta (get_current_user_id(), 'subscribed_till_end', 'yes');    
-  	} 
- }
- 
+		   //set meta to unsubscribed till period ends. in limbo state
+		   update_user_meta ($user_id, 'subscribed_till_end', 'yes');    
+  		} 
+ 	} 
 }
-
 //logout normal user to homepage
 add_action('wp_logout','auto_redirect_after_logout');
 function auto_redirect_after_logout(){
