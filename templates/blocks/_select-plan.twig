@@ -9,16 +9,21 @@
                     </div>
                     
                     {% if email_address != '' %}
-                    {% set plan_link = item.link ~  '&email_address='~email_address %}
+                        {% set plan_link = item.link ~  '&email_address='~email_address %}
                     {% endif %}
 
                     {% if first_name != '' %}
-                    {% set plan_link = plan_link ~  '&first_name='~first_name %}
+                        {% set plan_link = plan_link ~  '&first_name='~first_name %}
                     {% endif %}
 
                     {% if last_name != '' %}
-                    {% set plan_link = plan_link ~  '&last_name='~last_name %}
+                        {% set plan_link = plan_link ~  '&last_name='~last_name %}
                     {% endif %}
+
+                    {% if phone != '' %}
+                        {% set plan_link = plan_link ~  '&phone='~phone %}
+                    {% endif %}
+
                     <a href="{{ plan_link | e('esc_url')}}" class="button button--blue">Select Plan<img src="{{ theme.path }}/assets/img/star-icon.svg" alt=""/></a>
                 </div>
             </div>
