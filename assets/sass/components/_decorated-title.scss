@@ -20,6 +20,9 @@
 				top: -12px;
 			}
 		}
+		@include max-screen($s) {
+			font-size: 3rem;
+		}
 	}
 	border-bottom: 5px solid $light-grey;
 }

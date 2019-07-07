@@ -2824,6 +2824,10 @@ div.gfield_creditcard_warning_message {
   .industries-page .benefits__item:last-child {
     margin-bottom: 120px; } }
 
+@media only screen and (max-width: 480px) {
+  .industries-page .booking-form {
+    padding-bottom: 80px; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -4001,6 +4005,9 @@ div.gfield_creditcard_warning_message {
         .decorated-title h2:before {
           left: -33px;
           top: -12px; } }
+    @media only screen and (max-width: 480px) {
+      .decorated-title h2 {
+        font-size: 3rem; } }
 
 .featured-posts {
   margin: 80px 0; }
