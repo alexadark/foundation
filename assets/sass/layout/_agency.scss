@@ -40,23 +40,6 @@
 	}
 }
 
-.work-page {
-	.hero {
-		// min-height: 200px;
-	}
-	.text-image {
-		padding-top: 0;
-	}
-	.title-cols {
-		&__entity {
-			&:last-child {
-				@include max-screen(1440px) {
-					padding-bottom: 100px;
-				}
-			}
-		}
-	}
-}
 .industries-page {
 	.decorated-title,
 	.decorated-title h2,

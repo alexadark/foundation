@@ -2390,13 +2390,6 @@ body {
 .industries-page footer {
   margin-top: -62px; }
 
-.work-page .text-image {
-  padding-top: 0; }
-
-@media only screen and (max-width: 1440px) {
-  .work-page .title-cols__entity:last-child {
-    padding-bottom: 100px; } }
-
 .industries-page .decorated-title,
 .industries-page .decorated-title h2,
 .industries-page .content-block,
@@ -2827,6 +2820,25 @@ div.gfield_creditcard_warning_message {
 @media only screen and (max-width: 480px) {
   .industries-page .booking-form {
     padding-bottom: 80px; } }
+
+.work-page .text-image {
+  padding-top: 0; }
+
+@media only screen and (max-width: 1440px) {
+  .work-page .title-cols__entity:last-child {
+    padding-bottom: 100px; } }
+
+@media only screen and (max-width: 480px) {
+  .work-page .animated-text {
+    padding-top: 0; } }
+
+@media only screen and (max-width: 480px) {
+  .work-page .title-cols__entity:last-child {
+    padding-bottom: 0; } }
+
+@media only screen and (max-width: 480px) {
+  .work-page .booking-form {
+    padding-bottom: 100px; } }
 
 /* Slider */
 .slick-slider {
