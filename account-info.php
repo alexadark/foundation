@@ -33,7 +33,11 @@ if( 0 != $current_user->ID ){
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
 	}
-	
+	if( $fnd_entry_id!="" ){
+		$context['no_subscription'] = false;
+	} else {
+		$context['no_subscription'] = true;
+	}
 	$context['cancel_link'] = site_url('/cancel-subscription/?plan=plan'.$context['paid_plan_id']);
 	$context['upgrade_link'] = site_url('/upgrade-subscription/?plan=plan'.$context['upgrade_plan_id']);
 	$context['logout_url'] =  wp_logout_url( home_url() );
