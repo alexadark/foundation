@@ -279,8 +279,8 @@ function completed_package_registration($user_id, $config, $entry, $user_pass) {
 				else
 					$user_role = "plan1_subscriber";
 				$stripe_customer_id = gform_get_meta( $entry["id"], 'stripe_customer_id' );
-				update_user_meta( $current_user->ID, 'stripe_customer_id', $stripe_customer_id );
-				update_user_meta($current_user->ID, 'fnd_entry_id', $entry["id"]);
+				update_user_meta( $user_id, 'stripe_customer_id', $stripe_customer_id );
+				update_user_meta($user_id, 'fnd_entry_id', $entry["id"]);
 				$u = new WP_User( $user_id );				
         		if( get_role($user_role) ){
         			$u->add_role( $user_role );
