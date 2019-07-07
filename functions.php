@@ -50,6 +50,7 @@ class StarterSite extends Timber\Site
 		add_filter('timber/twig', array($this, 'add_to_twig'));
 		add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
+		add_action('init', array($this, 'register_roles'));
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -58,7 +59,26 @@ class StarterSite extends Timber\Site
 	/** This is where you can register custom taxonomies. */
 	public function register_taxonomies()
 	{ }
+	/** This is where you can register custom role. */
+	public function register_roles()
+	{ 
+		$userroles = array("plan1_subscriber"=>"Plan A Subscriber","plan2_subscriber"=>"Plan B Subscriber");
+		foreach( $userroles as $key=>$val ):
+			if( !get_role($userrole) ){
+				add_role(
+				    $key,
+				    __( $val ),
+				    array(
+				        'read'         => true,  // true allows this capability
+				        'edit_posts'   => true,
+				        'delete_posts' => false, // Use false to explicitly deny
+				    )
+				);
+			}
+		endforeach;
+		
 
+	}
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
