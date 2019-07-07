@@ -2341,6 +2341,12 @@ body {
 .industries-page .hero {
   padding-bottom: 0; }
 
+@media only screen and (max-width: 480px) {
+  .agency-page .text-image.first,
+  .industries-page .text-image.first {
+    padding-top: 0;
+    padding-bottom: 10px; } }
+
 .agency-page .steps,
 .industries-page .steps {
   margin-top: -80px; }
@@ -2404,6 +2410,10 @@ body {
 .industries-page .font21 p {
   font-family: 'Avenir';
   font-weight: 500; }
+
+@media only screen and (max-width: 480px) {
+  .agency-page .featured-sites {
+    padding-bottom: 100px; } }
 
 .search {
   background: #21232b; }
