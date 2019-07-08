@@ -132,16 +132,6 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/assets/css/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/fonts/Avenir-Black.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -1209,7 +1199,7 @@
 		"bF": 2,
 		"ft": 64,
 		"ma": 1,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/js/custom.min.js",
 		"oF": 2,
@@ -2200,6 +2190,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/assets/sass/layout/_industries.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/sass/layout/_industries.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/assets/sass/layout/_layout.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2291,6 +2294,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/assets/sass/layout/_work.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/sass/layout/_work.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/assets/sass/style.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -2301,7 +2317,7 @@
 		"oA": 0,
 		"oAP": "/style.css",
 		"oF": 3,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/assets/sass/vendors/_selectric.scss": {
@@ -4697,7 +4713,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888/ross/",
+	"externalServerAddress": "http://ross-simmonds",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

@@ -19,6 +19,19 @@
 		padding: 0 !important;
 		text-align: center;
 	}
+	.gfield {
+		input {
+			padding-bottom: 5px !important;
+			padding-left: 10px !important;
+		}
+	}
+	.gfield_label {
+		transform: translate(-10px, 30px);
+
+		&.is-active {
+			transform: translate(-100px, 10px);
+		}
+	}
 	input[type='submit'] {
 		background: $green;
 		border-color: darken($green, 10%);
@@ -57,24 +70,38 @@
 			box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.75);
 			transform: translateY(-5px) !important;
 		}
+		position: relative;
+		padding-right: 70px !important;
+		&:after {
+			content: '';
+			background: url('./assets/img/dl-green.svg');
+			width: 12px;
+			height: 16px;
+			position: absolute;
+			right: 30px;
+		}
 	}
-	.gform_wrapper form li, .gform_wrapper li{
-		margin: 0 auto 10px!important;
+	.gform_wrapper form li,
+	.gform_wrapper li {
+		margin: 0 auto 10px !important;
 	}
-	.gform_wrapper .gform_footer{
-		margin:0 auto;
+	.gform_wrapper .gform_footer {
+		margin: 0 auto;
 	}
-	.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit]{
-		margin:0;
+	.gform_wrapper .gform_footer input.button,
+	.gform_wrapper .gform_footer input[type='submit'],
+	.gform_wrapper .gform_page_footer input.button,
+	.gform_wrapper .gform_page_footer input[type='submit'] {
+		margin: 0;
 	}
-	.gform_button button{
-		margin:20px;
+	.gform_button button {
+		margin: 20px;
 	}
 	/*.gform_wrapper .top_label .gfield_label{
 		display: inline;
 	}*/
-	.gform_wrapper .top_label input.medium{
-		width:100%!important;
+	.gform_wrapper .top_label input.medium {
+		width: 100% !important;
 	}
 	input[type='submit'] {
 		@include min-screen($xs) {

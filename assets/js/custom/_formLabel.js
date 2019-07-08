@@ -5,4 +5,5 @@
 			.prev()
 			.addClass('is-active');
 	});
+	$('.dlm-nf-download-link a').text('download now');
 })(jQuery);
