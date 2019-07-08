@@ -43,7 +43,7 @@
 		}
 
 		&.one {
-			@include min-screen($m) {
+			@include min-screen(769px) {
 				margin-top: 50px;
 				margin-right: 50px;
 			}
@@ -53,14 +53,14 @@
 			height: 280px;
 			background-image: linear-gradient(160deg, $blue 0%, $dark-blue 100%);
 
-			@include min-screen($m) {
+			@include min-screen(769px) {
 				margin: 30px auto 0;
 				transform: translateX(50px);
 			}
 		}
 		&.three {
 			background: $brown;
-			@include min-screen($m) {
+			@include min-screen(769px) {
 				transform: translateY(-30px);
 			}
 
@@ -68,13 +68,13 @@
 			height: 295px;
 		}
 		&.four {
-			@include min-screen($m) {
+			@include min-screen(769px) {
 				width: 345px;
 				height: 345px;
 			}
 
 			background: $blue;
-			@include min-screen($m) {
+			@include min-screen(769px) {
 				transform: translate(330px, -250px);
 			}
 

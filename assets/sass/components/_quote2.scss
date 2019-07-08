@@ -1,8 +1,15 @@
 .blockquote2 {
-	padding: 100px 0;
+	@include min-screen(1180px) {
+		padding: 100px 0;
+	}
+	padding: 0 0 100px;
+
 	color: $light-white;
 	.wrapper {
-		max-width: 614px;
+		@include min-screen(1180px) {
+			max-width: 614px;
+		}
+		max-width: 500px;
 		position: relative;
 		@include min-screen($l) {
 			&:before {

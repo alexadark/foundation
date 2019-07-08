@@ -10,36 +10,49 @@
 
                 </h4>
                 <div class="account-info__info">{{email}}
-                    <a class="green-link" href="">(edit)</a>
+                    <a id="update-email" class="green-link" href="#">(edit)</a>
+                    <div class="update-email__form update-accnt-info-form">
+	                {{ fn('do_shortcode','[gravityform id=12 title=false description=false ajax=true]') }}
+	                </div>
                 </div>
             </div>
             <div class="account-info__item">
                 <h4>Password:</h4>
-                <div class="account-info__info">********<a class="green-link" href="">(edit)</a>
+                <div class="account-info__info">********<a class="green-link" href="#" id="update-password">(edit)</a>
+                </div>
+                <div class="update-password__form update-accnt-info-form">
+                {{ fn('do_shortcode','[gravityform id=11 title=false description=false ajax=true]') }}
                 </div>
             </div>
             <div class="account-info__item">
                 <h4>Billing:</h4>
-                <div class="account-info__info">VISA ************1234
-                    <a class="green-link" href="">(edit)</a>
+                <div class="account-info__info">{{cc_type}} {{cc_details}}
+                    <a class="green-link" id="update-billing" href="#">(edit)</a>
                 </br>
-                123 Address goes here</br>
-            City, State</br>
-        Zip/Postal</br>
-	Country</div></div></div></div>
+                {{address}}</br>
+            {{city}}, {{state}}</br>
+        {{postal}}</br>
+	{{country}}</div>
+	<div class="update-billing__form update-accnt-info-form">
+                {{ fn('do_shortcode','[gravityform id=13 title=false description=false ajax=true]') }}
+                </div></div></div></div>
 <div class="wrapper">
 	<div class="spacer"></div>
 </div>
 	<div class="wrapper login-wrapper">
 	<h3 class="font32 bold black">Your plan:</h3>
 	<div class="account-info__plan bold active">
-		PLAN 1 - $10/mo
+		{{active_plan_info}}
 	</div>
-	<a href="" class="green-link cancel-link">cancel this plan</a>
+	{% if no_subscription == false %}
+		<a class="green-link cancel-link">cancel this plan</a>
+	{% else %}
+		<a class="green-link no-subscription">already cancelled</a>
+	{% endif %}
 	<div class="account-info__plan bold">
-		PLAN 1 - $100/yr
+		{{upgrade_plan_info}}
 	</div>
-	<a href="" class="green-link upgrade-link">change to this plan</a>
+	<a href="#" class="green-link upgrade-link">change to this plan</a>
 </div>
 
 <div class="account-lb cancel-lb">
@@ -48,8 +61,8 @@
 		<h2 class="account-lb__title font42 light-pink text-center bold">Are you sure you want to cancel your plan?</h2>
 		<div class="account-lb__subtitle font21 light-pink text-center">If you cancel your plan you will no longer be able to access our premium content.</div>
 		<div class="hero__buttons text-center">
-			<a href="" class="button button--dark">Yes - cancel plan</a>
-			<div  class="button button--green">no - nevermind</div>
+			<a href="{{cancel_link}}" class="button button--dark">Yes - cancel plan</a>
+			<div  class="button button--green close-plan-popup">no - nevermind</div>
 		</div>
 	</div>
 </div>
@@ -58,10 +71,10 @@
 		<div class="close"><img src="{{theme.path}}/assets/img/close.svg" alt=""></div>
 		<div class="wrapper">
 			<h2 class="account-lb__title font42 light-pink text-center bold">Are you sure you want to change your plan?</h2>
-			<div class="account-lb__subtitle font21 light-pink text-center">If you change your plan you will be billed yearly instead of monthly. Saving $20/yr</div>
+			<div class="account-lb__subtitle font21 light-pink text-center">{{upgrade_text}}</div>
 			<div class="hero__buttons text-center">
-				<a href="" class="button button--dark">Yes - change plan</a>
-				<div  class="button button--green">no - nevermind</div>
+				<a href="{{upgrade_link}}" class="button button--dark">Yes - change plan</a>
+				<div  class="button button--green close-plan-popup">no - nevermind</div>
 			</div>
 		</div>
 	</div>

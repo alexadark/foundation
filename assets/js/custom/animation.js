@@ -14,8 +14,17 @@ try {
 	animHeroTl
 		.to(homeHeader, 2, { opacity: 1 })
 		.fromTo(heroTitle, 2, { y: 10 }, { opacity: 1, y: 0 }, '-=1.5')
-		.fromTo(heroRedButton, 2, { y: 15 }, { opacity: 1, y: 0 }, '-=1.5')
-		.fromTo(heroBlueButton, 2, { y: 40 }, { opacity: 1, y: 0 }, '-=1.5');
+		.fromTo(
+			'.home .hero__buttons',
+			2,
+			{ y: 40 },
+			{ opacity: 1, y: 0 },
+			'-=1.5'
+		);
+	// .fromTo(heroRedButton, 2, { y: 15 }, { opacity: 1, y: 0 }, '-=1.5')
+	// .fromTo(heroBlueButton, 2, { y: 40 }, { opacity: 1, y: 0 }, '-=1.5');
+	// .to(heroRedButton, 2, { autoAlpha: 1 }, '-=1.5')
+	// .to(heroBlueButton, 2, { autoAlpha: 1 }, '-=1.5');
 } catch (error) {
 	console.log(error);
 }
@@ -192,18 +201,18 @@ const servicesScene = new ScrollMagic.Scene({
 
 //Macbook
 
-const macBook = CSSRulePlugin.getRule('.home .resources:before');
-const macBookTween = new TweenMax.fromTo(
-	macBook,
-	2,
-	{ cssRule: { y: 100 } },
-	{ cssRule: { y: 0 } }
-);
-const macBookScene = new ScrollMagic.Scene({
-	triggerElement: '.home .resources',
-	triggerHook: 1,
-	offset: 200,
-})
-	.setTween(macBookTween)
-	.addIndicators()
-	.addTo(controller);
+// const macBook = CSSRulePlugin.getRule('.home .resources:before');
+// const macBookTween = new TweenMax.fromTo(
+// 	macBook,
+// 	2,
+// 	{ cssRule: { y: 100 } },
+// 	{ cssRule: { y: 0 } }
+// );
+// const macBookScene = new ScrollMagic.Scene({
+// 	triggerElement: '.home .resources',
+// 	triggerHook: 1,
+// 	offset: 200,
+// })
+// 	.setTween(macBookTween)
+// 	.addIndicators()
+// 	.addTo(controller);

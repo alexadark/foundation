@@ -55,10 +55,17 @@
     </div>
 </section>
 
-{% if post.thumbnail and fn('is_author')== false and fn('is_category')==false %}
+{% if post.thumbnail and fn('is_single') and fn('is_author')== false and fn('is_category')==false %}
     <style>
         .hero {
             background: linear-gradient(180deg, #21232b 0, #21232b 9%, rgba(33, 35, 43, 0) 50%), url('{{post.thumbnail}}') no-repeat center center/cover;
+        }
+    </style>
+
+{% elseif post.thumbnail and fn('is_single')== false  %}
+    <style>
+        .hero {
+            background: linear-gradient(180deg, #21232b 0%, rgba(33, 35, 43, 0.85) 23%, rgba(33, 35, 43, 0) 100%), url('{{post.thumbnail}}') no-repeat center center/cover;
         }
     </style>
 {% endif %}

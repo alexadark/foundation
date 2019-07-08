@@ -4,6 +4,12 @@
 		// min-height: 200px;
 		padding-bottom: 0;
 	}
+	.text-image.first {
+		@include max-screen($s) {
+			padding-top: 0;
+			padding-bottom: 10px;
+		}
+	}
 	.steps {
 		margin-top: -80px;
 		&__intro {
@@ -34,23 +40,6 @@
 	}
 }
 
-.work-page {
-	.hero {
-		// min-height: 200px;
-	}
-	.text-image {
-		padding-top: 0;
-	}
-	.title-cols {
-		&__entity {
-			&:last-child {
-				@include max-screen(1440px) {
-					padding-bottom: 100px;
-				}
-			}
-		}
-	}
-}
 .industries-page {
 	.decorated-title,
 	.decorated-title h2,
@@ -77,5 +66,13 @@
 	.font21 p {
 		font-family: 'Avenir';
 		font-weight: 500;
+	}
+}
+
+.agency-page {
+	.featured-sites {
+		@include max-screen($s) {
+			padding-bottom: 100px;
+		}
 	}
 }
