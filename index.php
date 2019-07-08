@@ -15,24 +15,29 @@
 
 $context = Timber::context();
 
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 if(isset($_GET['sort'])) {
+    init_post_views();
     if ($_GET['sort'] == 'recent') {
-
         $args = array(
             'post_type' => 'post',
+//            'posts_per_page' => 6,
             'orderby' => 'date',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'paged' => $paged
         );
     } else {
         $args = array(
             'post_type' => 'post',
+//            'posts_per_page' => 6,
             'meta_key' => 'wpb_post_views_count',
             'orderby' => 'meta_value_num',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'paged' => $paged
         );
 
     }
-    $context['posts'] = Timber::get_posts( $args );
+    $context['posts'] = new Timber\PostQuery($args);
 } else {
     $context['posts'] = new Timber\PostQuery();
 }
@@ -42,8 +47,5 @@ global $wp;
 $context['current_url'] = home_url( $wp->request );
 
 
-// if (is_home()) {
-// 	array_unshift($templates, 'front-page.twig', 'home.twig');
-// }
 $context['cats'] = get_categories();
 Timber::render($templates, $context);

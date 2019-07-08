@@ -103,3 +103,13 @@ function select_cat_dropdown($active_cat, $current_cat){
         echo ' selected';
     }
 }
+function init_post_views(){
+    $post_ids = get_posts(array(
+        'post_type'     =>'post',
+        'fields'        => 'ids',
+        'showposts'     => -1
+    ));
+    foreach($post_ids as $post_id){
+        wpb_get_post_views($post_id);
+    }
+}

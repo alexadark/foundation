@@ -43,29 +43,38 @@ $term = get_queried_object();
 $context['cat_subtitle'] = get_field('category_subtitle', $term);
 $context['cats'] = get_categories();
 
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args = array(
+    'post_type' => 'post',
+    'category_name' => $category_id->slug,
+    'orderby' => 'date',
+    'order' => 'DESC',
+);
 if(isset($_GET['sort'])) {
+    init_post_views();
+    echo $category_id->slug;
     if ($_GET['sort'] == 'recent') {
 
         $args = array(
             'post_type' => 'post',
-            'category' => $category_id->slug,
+            'category_name' => $category_id->slug,
             'orderby' => 'date',
-            'order' => 'DESC'
+            'order' => 'DESC',
         );
     } else {
         $args = array(
             'post_type' => 'post',
-            'category' => $category_id->slug,
+            'category_name' => $category_id->slug,
             'meta_key' => 'wpb_post_views_count',
             'orderby' => 'meta_value_num',
-            'order' => 'DESC'
+            'order' => 'DESC',
         );
 
     }
-    $context['posts'] = Timber::get_posts( $args );
 } else {
-    $context['posts'] = new Timber\PostQuery();
+//    $context['posts'] = new Timber\PostQuery();
 }
+    $context['posts'] = new Timber\PostQuery($args);
 
 
 
