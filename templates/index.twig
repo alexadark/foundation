@@ -9,7 +9,7 @@
         <div class="wrapper posts-wrapper">
 
             {% for post in posts %}
-                <span class="views"; style="display: none;">Views: {{ post.wpb_post_views_count }}</span>
+                {#<span class="views"; style="display: none;">Views: {{ post.wpb_post_views_count }}</span>#}
                 {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
             {% endfor %}
 
