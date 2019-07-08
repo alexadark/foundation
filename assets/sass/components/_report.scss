@@ -94,8 +94,21 @@
 	.gform_wrapper .gform_page_footer input[type='submit'] {
 		margin: 0;
 	}
-	.gform_button button {
+	.gform_button {
 		margin: 20px;
+	}
+
+	.gform_footer {
+		position: relative;
+		&:after {
+			content: '';
+			background: url('./assets/img/dl-green.svg');
+			width: 12px;
+			height: 16px;
+			position: absolute;
+			right: 30px;
+			bottom: 30px;
+		}
 	}
 	/*.gform_wrapper .top_label .gfield_label{
 		display: inline;

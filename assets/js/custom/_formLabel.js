@@ -6,4 +6,7 @@
 			.addClass('is-active');
 	});
 	$('.dlm-nf-download-link a').text('download now');
+	// $('.report .gfrom_button').html(
+	// 	'Download Now <img src="../img/dl-green,svg"/>'
+	// );
 })(jQuery);
