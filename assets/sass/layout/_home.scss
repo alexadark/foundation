@@ -19,16 +19,47 @@
 // 		transform: translateY(0);
 // 	}
 // }
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInUp {
+	animation-delay: 1.5s;
+	animation-name: fadeInUp;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+}
+.fadeInUpLong {
+	animation-delay: 2.5s;
+	animation-name: fadeInUp;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+}
 .home {
 	background: $light-white;
 	.hero__title {
 		opacity: 0;
 	}
 	.hero__buttons {
-		opacity: 0;
+		// opacity: 0;
 		.button--salmon,
 		.button--blue {
-			// opacity: 0;
+			z-index: 100;
+			position: relative;
+			&.hidden {
+				opacity: 0;
+			}
 		}
 
 		// .button--salmon {

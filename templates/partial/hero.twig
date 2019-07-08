@@ -36,8 +36,8 @@
         {% if isAccounfInfo == false %}
             <div class="hero__buttons text-center">
                 {% if fn('is_front_page') %}
-                    <a class="button button--salmon" href="#scrollTo">get a Proposal</a>
-                    <a class="button button--blue" href="/research">OR GET OUR RESEARCH</a>
+                    <a class="button button--salmon hidden" href="#scrollTo">get a Proposal</a>
+                    <a class="button button--blue hidden" href="/research">OR GET OUR RESEARCH</a>
                 {% else %}
                     {% include "partial/client-button.twig" %}
                     {% if
