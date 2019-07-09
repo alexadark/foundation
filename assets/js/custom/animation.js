@@ -160,7 +160,7 @@ const asteroidTween = new TimelineMax()
 		},
 		'-=1.5'
 	);
-if (w >= 1200 && w <= 1440) {
+if (w >= 1200 && w <= 1442) {
 	const asteroidScene = new ScrollMagic.Scene({
 		triggerElement: '.asteroid',
 		triggerHook: 1,

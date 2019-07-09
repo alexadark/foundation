@@ -52,24 +52,14 @@
 		opacity: 0;
 	}
 	.hero__buttons {
-		// opacity: 0;
 		.button--salmon,
 		.button--blue {
-			z-index: 100;
+			z-index: 10;
 			position: relative;
 			&.hidden {
 				opacity: 0;
 			}
 		}
-
-		// .button--salmon {
-		// 	&:hover {
-		// 		animation: fadInUpShort 2s ease-in-out 2s;
-		// 	}
-		// }
-		// .button--blue {
-		// 	animation: fadInUpLong 2s ease-in-out 3s;
-		// }
 	}
 }
 .home-animated-image {
@@ -83,18 +73,7 @@
 	.big-image {
 		width: 100%;
 		height: auto;
-		#triangle {
-			// transform: translate(157px, -49px);
-		}
 	}
-
-	// .home-triangle {
-	// 	position: absolute;
-	// 	bottom: -100px;
-	// 	left: 150px;
-	// 	transform-origin: center center;
-	// 	transform: rotate(-30deg);
-	// }
 }
 
 .home-2cols {
@@ -138,7 +117,7 @@
 	@include screen(1200px, 1440px) {
 		margin-bottom: -200px;
 	}
-	@include min-screen(1440px) {
+	@include min-screen(1441px) {
 		padding-top: 100px;
 	}
 
@@ -180,7 +159,7 @@
 			margin-top: 50px;
 		}
 		position: relative;
-		@include min-screen(1440px) {
+		@include min-screen(1441px) {
 			display: none;
 		}
 	}
@@ -191,7 +170,7 @@
 		@include max-screen(1440px) {
 			flex-basis: 80%;
 		}
-		@include min-screen(1440px) {
+		@include min-screen(1441px) {
 			flex-basis: 50%;
 		}
 
@@ -203,7 +182,7 @@
 			transform: translateX(-100px);
 			margin-bottom: 100px;
 		}
-		@include min-screen(1440px) {
+		@include min-screen(1441px) {
 			transform: translate(100px, -100px);
 		}
 	}
@@ -225,7 +204,7 @@
 		// top: 278px;
 		// left: 39px;
 	}
-	@include min-screen(1440px) {
+	@include min-screen(1441px) {
 		flex-basis: 50%;
 		transform: translate(-100px, -50px) !important;
 	}
