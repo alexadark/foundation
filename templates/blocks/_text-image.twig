@@ -13,7 +13,8 @@
                     <div class="text-image__text">
                         <h2 class="font42 bold light-pink text-image__title">{{ item.text | e('esc_html')}}</h2>
                         {% if item.subtext %}
-                            <div class="text-image__subtext">{{ item.subtext | e('esc_html')}}</div>
+                            <div class="text-image__subtext">{{ item.subtext | e('wp_kses_post') | wpautop}}</div>
+
                         {% endif %}
                     </div>
                     <div class="text-image__image">

@@ -23,7 +23,9 @@
 	border-radius: 3px;
 	margin-bottom: 3px;
 	.lab__dd--cats & {
-		padding: 0 120px 0 20px;
+		@include min-screen($s) {
+			padding: 0 120px 0 20px;
+		}
 	}
 }
 

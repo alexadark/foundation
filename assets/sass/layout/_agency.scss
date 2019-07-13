@@ -75,4 +75,12 @@
 			padding-bottom: 100px;
 		}
 	}
+	.text-image.first {
+		.text-image__title {
+			@include min-screen($m) {
+				font-size: 5.6rem;
+				transform: translateY(50px);
+			}
+		}
+	}
 }
