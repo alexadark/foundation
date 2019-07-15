@@ -1,9 +1,9 @@
 <section class="hero bg-black ">
     <div class="wrapper">
         {% set heroTitle = post.hero_title ? post.hero_title | e('wp_kses_post') :
-		title | e('esc_html') %}
+        title | e('esc_html') %}
         {% set title_prefix = (fn('is_category') or fn('is_home') ) ? 'The Lab
-		:' : '' %}
+        :' : '' %}
         <h1 class="hero__title font42 text-center light-pink bold no-margin">
             {{ title_prefix }}
             {{ heroTitle }}
@@ -26,22 +26,16 @@
             </div>
         {% endif %}
         {% set isAccounfInfo = fn('is_page_template','account-info.php') %}
-
-        {% if isAccounfInfo %}
-            <h1 class="hero__title font42 text-center light-pink bold no-margin">
-                Hi,
-                {{name}}
-            </h1>
-        {% endif %}
+        
         {% if isAccounfInfo == false %}
             <div class="hero__buttons text-center">
                 {% if fn('is_front_page') %}
-                    <a class="button button--salmon hidden" href="#scrollTo">get a Proposal</a>
-                    <a class="button button--blue hidden" href="/research">OR GET OUR RESEARCH</a>
+                    <a class="button button--salmon" href="#scrollTo">get a Proposal</a>
+                    <a class="button button--blue" href="/research">OR GET OUR RESEARCH</a>
                 {% else %}
                     {% include "partial/client-button.twig" %}
                     {% if
-			post.custom_button == false and fn('is_user_logged_in') == false %}
+            post.custom_button == false and fn('is_user_logged_in') == false %}
                         <a class="button button--dark button--login" href="/login">Login
                             <img src="{{ theme.path }}/assets/img/icon-login-arrow.svg" alt=""/></a>
 
@@ -55,17 +49,10 @@
     </div>
 </section>
 
-{% if post.thumbnail and fn('is_single') and fn('is_author')== false and fn('is_category')==false %}
+{% if post.thumbnail and fn('is_author')== false and fn('is_category')==false %}
     <style>
         .hero {
             background: linear-gradient(180deg, #21232b 0, #21232b 9%, rgba(33, 35, 43, 0) 50%), url('{{post.thumbnail}}') no-repeat center center/cover;
-        }
-    </style>
-
-{% elseif post.thumbnail and fn('is_single')== false  %}
-    <style>
-        .hero {
-            background: linear-gradient(180deg, #21232b 0%, rgba(33, 35, 43, 0.85) 23%, rgba(33, 35, 43, 0) 100%), url('{{post.thumbnail}}') no-repeat center center/cover;
         }
     </style>
 {% endif %}

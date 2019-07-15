@@ -1,12 +1,14 @@
 {% extends "base.twig" %}
 {% block content %}
     {% include "partial/hero.twig" %}
-    <div class="account-menu uppercase bold">
-        <a class="account-menu__item" href="/select-your-plan">1. Select plan</a>
-        <span>/</span>
-        <a class="account-menu__item current" href="#">2. Account setup</a>
-        <span>/</span>
-        <span class="account-menu__item">3. plan confirmation</span>
-    </div>
+    {% if top_section%}
+	    <div class="account-menu uppercase bold">
+	        <a class="account-menu__item" href="/select-your-plan">1. Select plan</a>
+	        <span>/</span>
+	        <a class="account-menu__item current" href="#">2. Account setup</a>
+	        <span>/</span>
+	        <span class="account-menu__item">3. plan confirmation</span>
+	    </div>
+     {% endif %}
     {% include "blocks/block-logic.twig" %}
 {% endblock %}
