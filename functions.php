@@ -202,10 +202,7 @@ function wpc_gravity_registration_autologin( $user_id, $user_config, $entry, $pa
 // Save the users' Stripe customer ID after a payment is made via a subscription Stripe feed.
 add_action( 'gform_stripe_customer_after_create', 'save_stripe_customer_id',99999 );
 function save_stripe_customer_id( $customer ) {
-	error_log(print_r("##MEM DEtails ##",true));
-    error_log(print_r($customer,true));
-    error_log(print_r(get_current_user_id(),true));
-    if ( is_user_logged_in () ) {
+	if ( is_user_logged_in () ) {
         $user_id = get_current_user_id();
         GFCommon::log_debug( __METHOD__ . '(): Adding customer id ' . $customer->id . ' to user ' . $user_id );
         update_user_meta( $user_id, 'stripe_customer_id', $customer->id );
@@ -280,33 +277,12 @@ add_action("gform_user_updated", "completed_package_registration", 10, 4);
 
 function completed_package_registration($user_id, $config, $entry, $user_pass) {
 			
-			if( !empty($entry["source_url"]) && strpos($entry["source_url"], "plan")!==FALSE ){
-				parse_str( parse_url( $entry["source_url"], PHP_URL_QUERY), $pcg_array );
-				$user_package_id = $pcg_array["plan"] ;
-			} elseif( !empty($entry[10]) ){
-				$package_details = $entry[10];
-				$package_details = explode("|",$package_details );
-				$user_package_id = $package_details[0];
-			} else {
-				return ;
-			}
-
-			if( ( $user_package_id !=""  && strtolower($entry["payment_status"])=="active") || ($user_package_id !=""  && strtolower($entry["payment_status"])=="paid" && $entry["status"]=="active") ){
-				if( $user_package_id == "Plan2" )
-					$user_role = "plan2_subscriber";
-				else
-					$user_role = "plan1_subscriber";
+			if(  (strtolower($entry["payment_status"])=="active" ||  strtolower($entry["payment_status"])=="paid") && $entry["status"]=="active") {
+				 error_log(print_r($entry["id"],true));
 				$stripe_customer_id = gform_get_meta( $entry["id"], 'stripe_customer_id' );
 				update_user_meta( $user_id, 'stripe_customer_id', $stripe_customer_id );
 				update_user_meta($user_id, 'fnd_entry_id', $entry["id"]);
-				$u = new WP_User( $user_id );				
-        		if( get_role($user_role) ){
-        			$u->add_role( $user_role );
-        			update_user_meta( $user_id, 'user_paid_plan', $user_role);
-        		}
-
-			} 		
-
+			}
 }
 
 //process the subscription cancelling
