@@ -2462,6 +2462,14 @@
 		"oAP": "/functions/widget-areas.php",
 		"oF": 0
 		},
+	"/gravityformsuserregistration-loggedin.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gravityformsuserregistration-loggedin.php",
+		"oF": 0
+		},
 	"/header.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -11,8 +11,12 @@
                 </div>
             {% endif %}
             <div class="booking-form__form">
-                {% set form =  block.form | e('esc_html') %}
-                {{ fn('do_shortcode','[gravityform id='~ form ~ ' title=false description=false ajax=true]') }}
+                {% if form_id !="" %}
+                    {{ fn('do_shortcode','[gravityform id='~ form_id ~ ' title=false description=false ajax=true]') }}
+                {% else %}
+                    {% set form =  block.form | e('esc_html') %}
+                    {{ fn('do_shortcode','[gravityform id='~ form ~ ' title=false description=false ajax=true]') }}
+                {% endif %}
             </div>
 
 
