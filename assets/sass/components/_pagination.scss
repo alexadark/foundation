@@ -3,7 +3,7 @@
 	//@include flexbox(start, row nowrap);
 	margin-top: 140px;
 	padding-left: 0;
-	width:100%;
+	width: 100%;
 	overflow: hidden;
 	padding-top: 20px;
 	li {
@@ -11,13 +11,14 @@
 		font-size: 2.4rem;
 		/*padding-right: 100px;*/
 		display: inline-block;
+
 		/*float: left;*/
 		/*&:nth-last-child(2),
 		&:nth-last-child(3) {
 			display: none;
 		}*/
 		&.current {
-			span{
+			span {
 				&.current {
 					background: $blue;
 					height: 70px;
@@ -28,11 +29,10 @@
 					align-items: center;
 					margin-top: -15px;
 				}
-				&.dots{
+				&.dots {
 					color: $grey;
 				}
 			}
-			
 		}
 		&.last {
 			text-transform: uppercase;
@@ -52,6 +52,17 @@
 			@include flexbox(center, row nowrap);
 			align-items: center;
 			margin-top: -15px;
+			&:hover {
+				background: $blue;
+				height: 70px;
+				width: 70px;
+				border-radius: 50%;
+				display: inline-block;
+				color: $light-white;
+				@include flexbox(center, row nowrap);
+				align-items: center;
+				margin-top: -15px;
+			}
 		}
 	}
 }
