@@ -332,6 +332,7 @@ function fnd_cancel_subscription( $entry, $form ) {
 		    
 		   //destroy old entry id so they cant cancel twice... not sure its necessary
 		   update_user_meta($user_id, 'fnd_entry_id', '');
+		   update_user_meta($user_id, 'user_old_paid_plan', $_REQUEST["plan"]);
 
 		   //set meta to unsubscribed till period ends. in limbo state
 		   update_user_meta ($user_id, 'subscribed_till_end', 'yes');    

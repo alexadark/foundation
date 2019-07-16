@@ -19,6 +19,7 @@ if( 0 != $current_user->ID ){
 	$context['state'] = get_user_meta( $current_user->ID, 'state', true );
 	$context['country'] = get_user_meta( $current_user->ID, 'country', true );
 	$paid_plan = get_user_meta( $current_user->ID, 'user_paid_plan', true );
+	$old_paid_plan = get_user_meta( $current_user->ID, 'user_old_paid_plan', true );
 	$context['paid_plan'] = $paid_plan;
 	if( $paid_plan =="plan1_subscriber" ){		
 		$context['paid_plan_id'] = 1;
@@ -39,6 +40,8 @@ if( 0 != $current_user->ID ){
 	} else {
 		$context['no_subscription'] = true;
 	}
+	if( $paid_plan=="" && $old_paid_plan!="" )
+		$context['no_subscription'] = true;
 	$context['cancel_link'] = site_url('/cancel-subscription/?plan=plan'.$context['paid_plan_id']);
 	$context['upgrade_link'] = site_url('/upgrade-subscription/?plan=plan'.$context['upgrade_plan_id']);
 	$context['logout_url'] =  wp_logout_url( home_url() );

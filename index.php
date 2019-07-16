@@ -45,7 +45,11 @@ if(isset($_GET['sort'])) {
 $templates = array('index.twig');
 global $wp;
 $context['current_url'] = home_url( $wp->request );
-
+if( isset($_REQUEST["registration"]) && $_REQUEST["registration"]=="true" && isset($_REQUEST["fname"]) && $_REQUEST["fname"]!="" ){
+    $context['welcome_message'] ="Welcome to the foundation site.";
+} else {
+    $context['welcome_message'] ="";
+}
 
 $context['cats'] = get_categories();
 Timber::render($templates, $context);

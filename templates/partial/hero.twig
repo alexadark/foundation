@@ -8,6 +8,11 @@
             {{ title_prefix }}
             {{ heroTitle }}
         </h1>
+        {% if welcome_message!="" %}
+        <div class="hero__content text-center grey">
+        {{ welcome_message }}
+        </div>
+       {% endif %}
         {% if post.hero_content or fn('is_archive') %}
             <div class="hero__content text-center grey">
                 {{ post.hero_content | e('wp_kses_post') |wpautop}}
