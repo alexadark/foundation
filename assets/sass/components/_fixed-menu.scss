@@ -9,6 +9,9 @@
 	transition: $transition4;
 	visibility: hidden;
 	display: none;
+	.fixed-hide {
+		display: none;
+	}
 	@include min-screen($m) {
 		display: block;
 	}

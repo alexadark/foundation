@@ -13,11 +13,12 @@
 		}
 	}
 	.featured-sites {
-		margin-top: -106px;
-		padding-top: 106px;
+		// margin-top: -106px;
+		// padding-top: 106px;
+		padding-bottom: 50px;
 		&.curve-black {
 			@include min-screen(960px) {
-				padding-top: 100px;
+				padding-top: 50px;
 			}
 			padding-top: 0;
 			padding-bottom: 0;
@@ -28,9 +29,9 @@
 		&.first {
 			padding-top: 0;
 			margin-top: 0;
-			// .featured-sites__title {
-			// 	margin-top: 0;
-			// }
+			.featured-sites__title {
+				margin-top: 0;
+			}
 		}
 	}
 	.hero {

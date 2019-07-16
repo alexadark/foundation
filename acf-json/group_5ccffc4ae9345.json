@@ -829,6 +829,28 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5d2da56fae499",
+                            "label": "Top Text",
+                            "name": "top_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_validate": "",
+                            "acfe_update": "",
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5cd3c48a26ca9",
                             "label": "texts",
                             "name": "texts",
@@ -873,6 +895,28 @@
                                     "maxlength": ""
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_5d2da581ae49a",
+                            "label": "Bottom Text",
+                            "name": "bottom_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_validate": "",
+                            "acfe_update": "",
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_5cd3c9c290487",
@@ -2375,5 +2419,5 @@
     "acfe_permissions": "",
     "acfe_note": "",
     "acfe_meta": "",
-    "modified": 1560579559
+    "modified": 1563272620
 }

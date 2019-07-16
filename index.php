@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  * This is the most generic template file in a WordPress theme
@@ -15,40 +16,41 @@
 
 $context = Timber::context();
 
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-if(isset($_GET['sort'])) {
-    init_post_views();
-    if ($_GET['sort'] == 'recent') {
-        $args = array(
-            'post_type' => 'post',
-//            'posts_per_page' => 6,
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'paged' => $paged
-        );
-    } else {
-        $args = array(
-            'post_type' => 'post',
-//            'posts_per_page' => 6,
-            'meta_key' => 'wpb_post_views_count',
-            'orderby' => 'meta_value_num',
-            'order' => 'DESC',
-            'paged' => $paged
-        );
-
-    }
-    $context['posts'] = new Timber\PostQuery($args);
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if (isset($_GET['sort'])) {
+	init_post_views();
+	if ($_GET['sort'] == 'recent') {
+		$args = array(
+			'post_type' => 'post',
+			//            'posts_per_page' => 6,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'paged' => $paged
+		);
+	} else {
+		$args = array(
+			'post_type' => 'post',
+			//            'posts_per_page' => 6,
+			'meta_key' => 'wpb_post_views_count',
+			'orderby' => 'meta_value_num',
+			'order' => 'DESC',
+			'paged' => $paged
+		);
+	}
+	$context['posts'] = new Timber\PostQuery($args);
 } else {
-    $context['posts'] = new Timber\PostQuery();
+	$context['posts'] = new Timber\PostQuery();
 }
 
 $templates = array('index.twig');
 global $wp;
-$context['current_url'] = home_url( $wp->request );
-if( isset($_REQUEST["registration"]) && $_REQUEST["registration"]=="true" && isset($_REQUEST["fname"]) && $_REQUEST["fname"]!="" ){
-    $context['welcome_message'] ="Welcome to the foundation site.";
+$context['current_url'] = home_url($wp->request);
+if (isset($_REQUEST["registration"]) && $_REQUEST["registration"] == "true" && isset($_REQUEST["fname"]) && $_REQUEST["fname"] != "") {
+	$context['welcome_message'] = "Enjoy access to exclusive premium & research";
+	$context['welcome_title'] = "Welcome to The Lab's Premium Content!";
 } else {
-    $context['welcome_message'] ="";
+	$context['welcome_message']  = "";
+	$context['welcome_title']  = "";
 }
 
 $context['cats'] = get_categories();

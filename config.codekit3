@@ -1028,6 +1028,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/img/stars-green.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/stars-green.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/img/stars.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1874,6 +1884,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/sass/components/_text-image.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/sass/components/_thank-you.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/sass/components/_thank-you.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

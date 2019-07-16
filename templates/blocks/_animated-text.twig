@@ -2,13 +2,13 @@
 {% block contentBlock %}
     <div class="animated-text {{ class }}">
         <div class="wrapper">
-            <div class="animated-text__top animated-text__title font56 bold">Create Content</div>
+            <div class="animated-text__top animated-text__title font56 bold">{{ block.top_text | e('esc_html')}}</div>
             <div class="animated-text__animation">
                 {% for item in block.texts %}
                     <div class="animated-text__item bold">{{ item.text | e('esc_html')}}</div>
                 {% endfor %}
             </div>
-            <div class="animated-text__bottom animated-text__title font56 bold">That Shapes Culture</div>
+            <div class="animated-text__bottom animated-text__title font56 bold">{{ block.bottom_text | e('esc_html')}}</div>
         </div>
 
     </div>

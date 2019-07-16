@@ -1,0 +1,37 @@
+.thank-you {
+	background: $green;
+	padding: 140px 35px 65px;
+	border-radius: 4px;
+	position: relative;
+	&__subtitle {
+		color: $light-white;
+		margin: 0 auto 30px;
+		max-width: 267px;
+		line-height: 1.8;
+		font-size: 1.8rem;
+	}
+	&:before {
+		content: '';
+		background: url('./assets/img/stars-green.svg') no-repeat;
+		background-size: cover;
+		width: 260px;
+		height: 76px;
+		position: absolute;
+		left: 70px;
+		top: 70px;
+	}
+	.button {
+		padding-right: 100px;
+		position: relative;
+		&:after {
+			content: '';
+			background: url('./assets/img/star-icon.svg') no-repeat;
+			background-size: cover;
+			width: 19px;
+			height: 19px;
+			position: absolute;
+			right: 30px;
+			top: 18px;
+		}
+	}
+}
