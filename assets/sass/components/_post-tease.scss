@@ -158,8 +158,7 @@
 //inner posts
 
 .small-posts-wrapper,
-.category .posts-wrapper,
-.author .posts-wrapper {
+.category .posts-wrapper {
 	display: flex;
 	justify-content: space-between;
 	@include max-screen(1010px) {

@@ -30,7 +30,7 @@
         </div>
         <div class="tease-post__content--bottom">
             {% include "partial/read-more.twig" %}
-            {% if fn('is_home') %}
+            {% if fn('is_home') or fn('is_author') %}
                 {% include "partial/post-meta.twig" %}
             {% endif %}
 
