@@ -1,23 +1,18 @@
 {% if menu %}
-<ul>
-	{% for item in menu %}
-	<li class="{{ item.classes | join(' ') }}">
-		<a
-			class="bold light-pink"
-			target="{{ item.target }}"
-			href="{{ item.link }}"
-			>{{ item.title }}</a
-		>
-		{% include "menu.twig" with {'menu': item.children} %}
-	</li>
+    <ul>
+        {% for item in menu %}
+            <li class="{{ item.classes | join(' ') }}">
+                <a class="bold light-pink" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                {% include "menu.twig" with {'menu': item.children} %}
+            </li>
 
-	{% endfor %}
-	<li class="menu-item top-menu-login">
-		{% if fn('is_user_logged_in') %}
-		<a href="/acount">Acount</a>
-		{% else %}
-		<a href="/login">Login</a>
-		{% endif %}
-	</li>
-</ul>
+        {% endfor %}
+        <li class="menu-item top-menu-login">
+            {% if fn('is_user_logged_in') %}
+                <a href="/account-info">Acount</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+        </li>
+    </ul>
 {% endif %}
