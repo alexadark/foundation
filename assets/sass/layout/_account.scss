@@ -34,6 +34,11 @@
 		border-bottom: 4px solid rgba($medium-grey, 0.3);
 		color: #000 !important;
 	}
+	.gform_button {
+		@include max-screen(500px) {
+			font-size: 1rem !important;
+		}
+	}
 	.ginput_container_email {
 		input {
 			color: $green !important;
