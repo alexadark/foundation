@@ -3052,6 +3052,14 @@
 		"oAP": "/templates/partial/_author-intro.twig",
 		"oF": 0
 		},
+	"/templates/partial/_butter-animated-old.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/templates/partial/_butter-animated-old.twig",
+		"oF": 0
+		},
 	"/templates/partial/_butter-animated.twig": {
 		"cB": 0,
 		"ft": 8192,
