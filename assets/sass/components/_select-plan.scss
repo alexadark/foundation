@@ -56,7 +56,10 @@
 		margin-bottom: 50px;
 	}
 	.button {
-		width: 314px;
+		@include min-screen($s) {
+			width: 314px;
+		}
+
 		display: block;
 	}
 }
