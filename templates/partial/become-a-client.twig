@@ -1,8 +1,8 @@
 <div class="bac bg-black">
-    <h2 class="bac__title uppercase  font42 light text-center no-margin">Become a client</h2>
-    <div class="bac__subtitle text-center grey">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
+    <h2 class="bac__title uppercase  font42 light text-center no-margin">{{ options.cta_title | e('esc_html')}}</h2>
+    <div class="bac__subtitle text-center grey">{{ options.cta_content | e('wp_kses_post') |wpautop}}</div>
     <div class="bac__button text-center">
-        <a class="button button--blue text-center" href="/select-your-plan">Select your plan
+        <a class="button button--blue text-center" href="/become-a-client">Become a client
             <img src="{{theme.path}}/assets/img/star-icon.svg" alt=""></a>
     </div>
 </div>
