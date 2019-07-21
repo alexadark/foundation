@@ -1,4 +1,6 @@
-<?php add_action('wp_enqueue_scripts', 'wst_styles_and_scripts');
+<?php
+
+add_action('wp_enqueue_scripts', 'wst_styles_and_scripts');
 function wst_styles_and_scripts()
 {
 	wp_enqueue_script('GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js', array(), '2.1.2', true);
