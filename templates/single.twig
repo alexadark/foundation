@@ -1,50 +1,53 @@
-{% extends "base.twig" %} {% block content %}
+{% extends "base.twig" %}
+{% block content %}
 
-{% set cats = post.categories %}
-{% set catsArray = [] %}
-{% for cat in cats %}
-	{% set catsArray = catsArray | merge([cat.slug]) %}
-{% endfor %}
+    {% set cats = post.categories %}
+    {% set catsArray = [] %}
+    {% for cat in cats %}
+        {% set catsArray = catsArray | merge([cat.slug]) %}
+    {% endfor %}
 
 
+    <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+        {% include "partial/hero-single.twig" %}
+        <section class="article-content">
+            <div class="wrapper">
+                {% include "partial/badge.twig" %}
 
-<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-	{% include "partial/hero-single.twig" %}
-	<section class="article-content">
-		<div class="wrapper">
-			{% include "partial/badge.twig" %}
+                <div class="article-body">
+                    <div class="wrap700">
+                        <div class="fixed-social">
+                            {{ fn('wpfai_social') }}
+                        </div>
+                        {% if post.post_intro %}
+                            <div class="blog-intro bold">
+                                <div class="text">{{ post.post_intro | e('esc_html')}}</div>
+                            </div>
+                        {% endif %}
+                        {% if "resources" in catsArray and post.download_id and post.resource_download %}
+                            {% include "partial/_get-report.twig" %}
+                        {% endif %}
 
-			<div class="article-body">
-				<div class="wrap700">
-					<div class="fixed-social">
-						{{ fn('wpfai_social') }}
-					</div>
-					{% if post.post_intro %}
-					<div class="blog-intro bold">
-						<div class="text">{{ post.post_intro | e('esc_html')}}</div>
-					</div>
-					{% endif %}
-					{% if "resources" in catsArray %}
-						{% include "partial/_get-report.twig" %}
-					{% endif %}
-					
-					{{ post.content }}
-				</div>
-				{% include "blocks/block-logic.twig" %}
-				<div class="wrap700">
-					<div class="share-bottom">
-						<div class="button button--salmon">Share this post</div>
-						<div class="share-bar">{{ fn('wpfai_social') }}</div>
-					</div>
-					{% include "partial/hero-meta.twig" %} {% if post.is_premium == false
-					and fn('is_user_logged_in') == false %} {% include "partial/CTA.twig"
-					%} {% endif %}
-				</div>
-			</div>
-			{% include "partial/related-posts.twig" %}
-		</div>
-	</section>
-</article>
+                        {{ post.content }}
+                    </div>
+                    {% include "blocks/block-logic.twig" %}
+                    <div class="wrap700">
+                        <div class="share-bottom">
+                            <div class="button button--salmon">Share this post</div>
+                            <div class="share-bar">{{ fn('wpfai_social') }}</div>
+                        </div>
+                        {% include "partial/hero-meta.twig" %}
+                        {% if post.is_premium == false
+					and fn('is_user_logged_in') == false %}
+                            {% include "partial/CTA.twig"
+					%}
+                        {% endif %}
+                    </div>
+                </div>
+                {% include "partial/related-posts.twig" %}
+            </div>
+        </section>
+    </article>
 
-<!-- /content-wrapper -->
+    <!-- /content-wrapper -->
 {% endblock %}

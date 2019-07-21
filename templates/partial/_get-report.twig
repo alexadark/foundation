@@ -12,6 +12,7 @@
         </div>
 
     {% else %}
-        {{ fn('do_shortcode','[dlm_gf_form download_id=2873]') }}
+        {% set ID = post.download_id | e('esc_html') %}
+        {{ fn('do_shortcode','[dlm_gf_form download_id='~ ID ~']') }}
     {% endif %}
 </div>
