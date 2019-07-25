@@ -1,25 +1,3 @@
-// @keyframes fadeInUpShort {
-// 	from {
-// 		opacity: 0;
-// 		transform: translateY(15px);
-// 	}
-// 	to {
-// 		opacity: 1;
-// 		transform: translateY(0);
-// 	}
-// }
-
-// @keyframes fadeInUpLong {
-// 	from {
-// 		opacity: 0;
-// 		transform: translateY(40px);
-// 	}
-// 	to {
-// 		opacity: 1;
-// 		transform: translateY(0);
-// 	}
-// }
-
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -48,7 +26,8 @@
 }
 .home {
 	background: $light-white;
-	.hero__title {
+	.hero__title,
+	.hero__content {
 		opacity: 0;
 	}
 	.hero__buttons {
@@ -60,6 +39,11 @@
 				opacity: 0;
 			}
 		}
+	}
+	.hero__content {
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.8;
 	}
 }
 .home-animated-image {

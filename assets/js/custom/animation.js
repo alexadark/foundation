@@ -1,48 +1,50 @@
-import { $, $$ } from './_utilities';
-const w = window.innerWidth;
+import { $, $$ } from './_utilities'
+const w = window.innerWidth
 
 // heroanimation
 
-const heroTitle = $('.home .hero__title');
-const heroRedButton = $('.home .hero__buttons .button--salmon');
-const heroBlueButton = $('.home .hero__buttons .button--blue');
-const homeHeader = $('.home .header__content');
+const heroTitle = $('.home .hero__title')
+const heroContent = $('.home .hero__content')
+const heroRedButton = $('.home .hero__buttons .button--salmon')
+const heroBlueButton = $('.home .hero__buttons .button--blue')
+const homeHeader = $('.home .header__content')
 
 try {
-	const animHeroTl = new TimelineMax();
+	const animHeroTl = new TimelineMax()
 
 	animHeroTl
 		.to(homeHeader, 2, { opacity: 1 })
-		.fromTo(heroTitle, 2, { y: 10 }, { opacity: 1, y: 0 }, '-=1.5');
+		.fromTo(heroTitle, 2, { y: 10 }, { opacity: 1, y: 0 }, '-=1.5')
+		.fromTo(heroContent, 2, { y: 20 }, { opacity: 1, y: 0 }, '-=1.5')
 
-	heroRedButton.classList.add('fadeInUp');
-	heroBlueButton.classList.add('fadeInUpLong');
+	heroRedButton.classList.add('fadeInUp')
+	heroBlueButton.classList.add('fadeInUpLong')
 	setTimeout(function() {
-		heroRedButton.classList.remove('hidden');
-		heroBlueButton.classList.remove('hidden');
-	}, 3000);
+		heroRedButton.classList.remove('hidden')
+		heroBlueButton.classList.remove('hidden')
+	}, 3000)
 } catch (error) {
-	console.log(error);
+	console.log(error)
 }
 
 // AnimatedText
-const texts = $$('.animated-text__item');
+const texts = $$('.animated-text__item')
 
 const animTextTl = new TimelineMax({
 	repeat: -1,
 	repeatDelay: 0.3,
 	paused: false,
-});
+})
 
 texts.forEach(textItem => {
-	animTextTl.to(textItem, 1, { opacity: 1 }).to(textItem, 1, { opacity: 0 });
-});
+	animTextTl.to(textItem, 1, { opacity: 1 }).to(textItem, 1, { opacity: 0 })
+})
 
 //Scroll animation
 
 //Top Menu
 
-var controller = new ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller()
 if (w > 768) {
 	const menuScene = new ScrollMagic.Scene({
 		triggerElement: '.header',
@@ -51,7 +53,7 @@ if (w > 768) {
 	})
 		.setClassToggle('#fixedMenu', 'active')
 		// .addIndicators()
-		.addTo(controller);
+		.addTo(controller)
 }
 
 //Glasses
@@ -62,7 +64,7 @@ const glassesTween = new TweenMax.to('#glasses', 4, {
 	x: -50,
 	rotation: 8,
 	transformOrigin: 'center center',
-});
+})
 
 const glassesScene = new ScrollMagic.Scene({
 	triggerElement: '.home .hero__title',
@@ -70,7 +72,7 @@ const glassesScene = new ScrollMagic.Scene({
 })
 	.setTween(glassesTween)
 	// .addIndicators()
-	.addTo(controller);
+	.addTo(controller)
 
 //Triangle
 
@@ -84,14 +86,14 @@ const triangleTween = new TweenMax.fromTo(
 		rotation: 50,
 		transformOrigin: 'center center',
 	}
-);
+)
 
 const triangleScene = new ScrollMagic.Scene({
 	triggerElement: '.home .hero__buttons',
 	triggerHook: 0,
 })
 	.setTween(triangleTween)
-	.addTo(controller);
+	.addTo(controller)
 
 //Two col
 
@@ -108,7 +110,7 @@ const twoColTween = new TimelineMax()
 		{ y: 150, opacity: 0 },
 		{ y: 0, opacity: 1 },
 		'-=1.5'
-	);
+	)
 
 const twoColScene = new ScrollMagic.Scene({
 	triggerElement: '.home-2cols',
@@ -117,7 +119,7 @@ const twoColScene = new ScrollMagic.Scene({
 })
 	.setTween(twoColTween)
 	// .addIndicators()
-	.addTo(controller);
+	.addTo(controller)
 
 //Asteroid
 
@@ -148,7 +150,7 @@ const asteroidTween = new TimelineMax()
 			y: 0,
 		},
 		'-=1.5'
-	);
+	)
 if (w >= 1200 && w <= 1442) {
 	const asteroidScene = new ScrollMagic.Scene({
 		triggerElement: '.asteroid',
@@ -157,7 +159,7 @@ if (w >= 1200 && w <= 1442) {
 	})
 		.setTween(asteroidTween)
 		// .addIndicators()
-		.addTo(controller);
+		.addTo(controller)
 }
 //Blue zone
 
@@ -166,7 +168,7 @@ const blueTween = new TweenMax.fromTo(
 	2,
 	{ y: 200, opacity: 0 },
 	{ y: 100, opacity: 1 }
-);
+)
 
 const blueScene = new ScrollMagic.Scene({
 	triggerElement: '.home-blue-section__content',
@@ -175,7 +177,7 @@ const blueScene = new ScrollMagic.Scene({
 })
 	.setTween(blueTween)
 	// .addIndicators()
-	.addTo(controller);
+	.addTo(controller)
 
 //Services
 
@@ -184,7 +186,7 @@ const servicesTween = new TimelineMax().fromTo(
 	2,
 	{ y: 50 },
 	{ y: 0 }
-);
+)
 
 const servicesScene = new ScrollMagic.Scene({
 	triggerElement: '.home .featured-services__container',
@@ -193,7 +195,7 @@ const servicesScene = new ScrollMagic.Scene({
 })
 	.setTween(servicesTween)
 	// .addIndicators()
-	.addTo(controller);
+	.addTo(controller)
 
 //Macbook
 

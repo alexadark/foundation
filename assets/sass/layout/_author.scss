@@ -1,5 +1,5 @@
 .author {
-	background: #fff;
+	// background: #fff;
 	.posts-wrapper {
 		background-color: $light-white;
 		padding: 30px;
@@ -53,7 +53,7 @@
 		}
 	}
 	&__bio {
-		font-size: 2.8rem;
+		// font-size: 2.8rem;
 		margin-bottom: 30px;
 		line-height: 1.4;
 		@include max-screen($m) {
