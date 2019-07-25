@@ -7,13 +7,12 @@
             {% include "partial/cat-dd.twig" %}
         </div>
         <div class="wrapper posts-wrapper">
-
             {% for post in posts %}
                 {#<span class="views"; style="display: none;">Views: {{ post.wpb_post_views_count }}</span>#}
                 {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
             {% endfor %}
 
-            {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3}) } %}
         </div>
+        {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3}) } %}
     </section>
 {% endblock %}
