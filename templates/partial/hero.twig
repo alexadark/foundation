@@ -40,12 +40,6 @@
         {% endif %}
         {% set isAccounfInfo = fn('is_page_template','account-info.php')
 		%}
-        {% if isAccounfInfo %}
-            <h1 class="hero__title font42 text-center light-pink bold no-margin">
-                Hi,
-                {{ name }}
-            </h1>
-        {% endif %}
         {% if isAccounfInfo == false %}
             <div class="hero__buttons text-center">
                 {% if fn('is_front_page') %}
