@@ -161,6 +161,7 @@
 .category .posts-wrapper {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	@include max-screen(1010px) {
 		flex-wrap: wrap;
 	}

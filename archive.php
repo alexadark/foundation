@@ -49,6 +49,7 @@ $args = array(
     'category_name' => $category_id->slug,
     'orderby' => 'date',
     'order' => 'DESC',
+    'paged' => $paged
 );
 if(isset($_GET['sort'])) {
     init_post_views();
@@ -60,6 +61,7 @@ if(isset($_GET['sort'])) {
             'category_name' => $category_id->slug,
             'orderby' => 'date',
             'order' => 'DESC',
+            'paged' => $paged
         );
     } else {
         $args = array(
@@ -68,6 +70,7 @@ if(isset($_GET['sort'])) {
             'meta_key' => 'wpb_post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'DESC',
+            'paged' => $paged
         );
 
     }
