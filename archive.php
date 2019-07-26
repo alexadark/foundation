@@ -53,7 +53,6 @@ $args = array(
 );
 if(isset($_GET['sort'])) {
     init_post_views();
-    echo $category_id->slug;
     if ($_GET['sort'] == 'recent') {
 
         $args = array(
