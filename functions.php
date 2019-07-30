@@ -64,7 +64,7 @@ class StarterSite extends Timber\Site
 	{ 
 		$userroles = array("plan1_subscriber"=>"Plan A Subscriber","plan2_subscriber"=>"Plan B Subscriber");
 		foreach( $userroles as $key=>$val ):
-			if( !get_role($userrole) ){
+			if( !get_role($key) ){
 				add_role(
 				    $key,
 				    __( $val ),
