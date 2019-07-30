@@ -2,8 +2,7 @@
     <div class="wrapper">
         {% set heroTitle = post.hero_title ? post.hero_title | e('wp_kses_post') :
         title | e('esc_html') %}
-        {% set title_prefix = (fn('is_category') or fn('is_home') ) ? 'The Lab
-        :' : '' %}
+
         <h1 class="hero__title font42 text-center light-pink bold no-margin">
             {% if welcome_title != "" %}
                 <span class="welcome">{{welcome_title}}</span>

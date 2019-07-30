@@ -1,12 +1,18 @@
 {% extends "tease.twig" %}
 {% block content %}
-    {% if post.get_thumbnail %}
 
-        <div class="tease-post__media">
-            <a href="{{ post.link }}">
-                {% include "partial/badge.twig" %}
-                <img src="{{post.thumbnail.src | resize(500, 312)}}"/>
+
+    <div class="tease-post__media">
+        <a href="{{ post.link }}">
+            {% include "partial/badge.twig" %}
+            {% set imgSrc = post.thumbnail.src %}
+            {% if imgSrc %}
+                <img src="{{imgSrc | resize(500, 312)}}"/>
+            {% else %}
+                <img src="{{theme.path}}/assets/img/default.png"/>
+
             {% endif %}
+
         </a>
         {% if post.post_video %}
             {% include "partial/video-duration.twig" %}
