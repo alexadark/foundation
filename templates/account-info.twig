@@ -47,12 +47,12 @@
 	{% if no_subscription == false %}
 		<a class="green-link cancel-link">cancel this plan</a>
 	{% else %}
-		<a class="green-link no-subscription">already cancelled</a>
+		<a class="green-link no-subscription">{{cancellation_text}}</a>
 	{% endif %}
 	<div class="account-info__plan bold">
 		{{upgrade_plan_info}}
 	</div>
-	<a href="#" class="green-link upgrade-link">change to this plan</a>
+	<a href="#" class="green-link upgrade-link">{{upgrade_plan_text}}</a>
 </div>
 
 <div class="account-lb cancel-lb">

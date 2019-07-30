@@ -242,7 +242,15 @@ add_action( 'gform_post_payment_callback', 'remove_user_privileges', 10, 3 );
 function remove_user_privileges( $entry, $action, $result ) {
  if ( ! $result && rgar( $action, 'type' ) == 'cancel_subscription' && strtolower( $entry['payment_status'] ) == 'cancelled' ) { 
     //$entry here is the original entry used to subscribe (form 2). not the cancel $entry. 
-     	cancel_user_role($entry);  
+     	cancel_user_role($entry); 
+     	$user_id = get_current_user_id(); 
+     	$fnd_entry_id = get_user_meta($user_id, 'fnd_entry_id',true);
+     	if( $fnd_entry_id =="" ){
+     		$site_url = get_site_url();
+     		wp_delete_user( $user_id );
+     		wp_redirect( $site_url );
+     		exit;
+     	}  
   }
  }
 
