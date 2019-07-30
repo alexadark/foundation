@@ -5,13 +5,8 @@
     <div class="tease-post__media">
         <a href="{{ post.link }}">
             {% include "partial/badge.twig" %}
-            {% set imgSrc = post.thumbnail.src %}
-            {% if imgSrc %}
-                <img src="{{imgSrc | resize(500, 312)}}"/>
-            {% else %}
-                <img class="default-img" src="{{theme.path}}/assets/img/default.png"/>
-
-            {% endif %}
+            {% set imgSrc = post.thumbnail.src ? post.thumbnail.src : TimberImage(options.default_image) %}
+            <img src="{{imgSrc | resize(500, 312)}}"/>
 
         </a>
         {% if post.post_video %}
