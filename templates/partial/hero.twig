@@ -42,8 +42,8 @@
         {% if isAccounfInfo == false %}
             <div class="hero__buttons text-center">
                 {% if fn('is_front_page') %}
-                    <a class="button button--salmon hidden" href="#scrollTo">get a Proposal</a>
-                    <a class="button button--blue hidden" href="/research">OR GET OUR RESEARCH</a>
+                    <a class="button button--salmon hidden" href="{{ post.home_red_button['url'] | e('esc_url')}}">{{ post.home_red_button['title'] | e('esc_html')}}</a>
+                    <a class="button button--blue hidden" href="{{ post.home_blue_button['url'] | e('esc_html')}}">{{ post.home_blue_button['title'] | e('esc_html')}}</a>
                 {% else %}
                     {% include "partial/client-button.twig" %}
                     {% if
