@@ -9,7 +9,7 @@
             {% if imgSrc %}
                 <img src="{{imgSrc | resize(500, 312)}}"/>
             {% else %}
-                <img src="{{theme.path}}/assets/img/default.png"/>
+                <img class="default-img" src="{{theme.path}}/assets/img/default.png"/>
 
             {% endif %}
 
