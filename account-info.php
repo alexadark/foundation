@@ -34,7 +34,7 @@ if( 0 != $current_user->ID ){
 		$context['upgrade_text'] = "If you change your plan you will be billed monthly instead of yearly.";
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
-		$context['upgrade_plan_text'] = "Downgrade To Monthly Plan";
+		$context['upgrade_plan_text'] = "";
 	}
 	$fnd_entry_id = get_user_meta($current_user->ID, 'fnd_entry_id',true);
 	if( $fnd_entry_id!="" ){
