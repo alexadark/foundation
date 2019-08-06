@@ -38,12 +38,13 @@
                         </div>
                         {% include "partial/hero-meta.twig" %}
                         {% if post.is_premium == false
-					and fn('is_user_logged_in') == false %}
+                        and fn('is_user_logged_in') == false %}
                             {% include "partial/CTA.twig"
-					%}
+                            %}
                         {% endif %}
                     </div>
                 </div>
+                {{ function('comments_template') }}
                 {% include "partial/related-posts.twig" %}
             </div>
         </section>
