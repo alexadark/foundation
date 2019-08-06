@@ -50,6 +50,10 @@
 		background: #fff;
 		padding: 14px !important;
 	}
+	.ginput_container_select select,
+	.ginput_card_field select {
+		color: $black !important;
+	}
 }
 
 .account-menu {
@@ -100,9 +104,4 @@
 	.hero {
 		min-height: 200px;
 	}
-}
-
-.ginput_container_select select,
-.ginput_card_field select {
-	color: $black !important;
 }
