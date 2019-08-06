@@ -27,18 +27,33 @@ if( 0 != $current_user->ID ){
 		$context['upgrade_text'] = "If you change your plan you will be billed yearly instead of monthly. Saving $20/yr";
 		$context['active_plan_info'] = "PLAN 1 - $10/mo";
 		$context['upgrade_plan_info'] = "PLAN 2 - $100/yr";
+		$context['upgrade_plan_text'] = "Upgrade to Yearly Plan";
 	} else {
 		$context['paid_plan_id'] = 2;
 		$context['upgrade_plan_id'] = 1;
 		$context['upgrade_text'] = "If you change your plan you will be billed monthly instead of yearly.";
 		$context['active_plan_info'] = "PLAN 2 - $100/yr";
 		$context['upgrade_plan_info'] = "PLAN 1 - $10/mo";
+		$context['upgrade_plan_text'] = "";
 	}
 	$fnd_entry_id = get_user_meta($current_user->ID, 'fnd_entry_id',true);
 	if( $fnd_entry_id!="" ){
 		$context['no_subscription'] = false;
 	} else {
 		$context['no_subscription'] = true;
+		$entry_id = get_user_meta( $current_user->ID, 'entry_id', true );
+		$context["cancellation_text"] = "already cancelled";
+		if( $entry_id ){
+			$entry = GFAPI::get_entry( $entry_id );
+			if( $entry["payment_status"]=="Cancelled" ){
+				 $payment_date = $entry["payment_date"];
+				 if($paid_plan =="plan1_subscriber")
+				 	$date = date('d-m-Y', strtotime('+1 month', strtotime($payment_date)));
+				 else
+				 	$date = date('d-m-Y', strtotime('+1 year', strtotime($payment_date)));
+				 $context["cancellation_text"] = "Account will cancel on ".$date;
+			}
+		}	
 	}
 	if( $paid_plan=="" && $old_paid_plan!="" )
 		$context['no_subscription'] = true;

@@ -528,6 +528,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/img/default.png": {
+		"ft": 32768,
+		"iS": 5145,
+		"oA": 0,
+		"oAP": "/assets/img/default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/dl-green.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -837,6 +848,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/assets/img/raw/default.png": {
+		"ft": 32768,
+		"iS": 12800,
+		"oA": 0,
+		"oAP": "/assets/img/default.png",
+		"oF": 2,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/img/raw/footer-bg.svg": {
 		"ft": 2097152,
