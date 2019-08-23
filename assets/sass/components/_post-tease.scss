@@ -122,8 +122,8 @@
 	.tease-post & {
 		margin-top: 20px;
 	}
-	color: $dark-grey;
-	font-size: 1.2rem;
+	color: $light-white;
+	font-size: 1.4rem;
 	div {
 		margin-right: 10px;
 		display: inline;
@@ -134,9 +134,9 @@
 		top: -1px;
 	}
 	a {
-		color: $dark-grey;
+		color: $light-white;
 		&:hover {
-			color: $dark-blue;
+			color: $salmon;
 		}
 	}
 }
