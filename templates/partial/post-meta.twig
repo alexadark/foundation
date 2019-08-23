@@ -1,29 +1,57 @@
 <div class="post-meta">
+	<div class="post-meta__author">
+		<a href="/author/{{ post.author.slug }}">
+			<i class="post-meta__icon">
+				<svg
+					height="9"
+					viewbox="0 0 9 9"
+					width="9"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M4.166 5.63c1.38 0 4.166.703 4.166 2.083v1.042H0V7.713C0 6.333 2.786 5.63 4.166 5.63zM2.083 2.506A2.09 2.09 0 0 1 4.166.423a2.09 2.09 0 0 1 2.083 2.083 2.09 2.09 0 0 1-2.083 2.083 2.09 2.09 0 0 1-2.083-2.083z"
+						fill="#707070"
+					/>
+				</svg>
+			</i>
 
-    <div class="post-meta__author">
-        <i class="post-meta__icon">
-            <svg height="9" viewbox="0 0 9 9" width="9" xmlns="http://www.w3.org/2000/svg"><path d="M4.166 5.63c1.38 0 4.166.703 4.166 2.083v1.042H0V7.713C0 6.333 2.786 5.63 4.166 5.63zM2.083 2.506A2.09 2.09 0 0 1 4.166.423a2.09 2.09 0 0 1 2.083 2.083 2.09 2.09 0 0 1-2.083 2.083 2.09 2.09 0 0 1-2.083-2.083z" fill="#707070"/></svg>
-        </i>
-        <a href="/author/{{ post.author.slug }}">
-            {{ post.author }}
-        </a>
-    </div>
-    <div class="post-meta__comment">
-
-        {% set commentsLength = post.comments | length %}
-        {% set comments = commentsLength > 1 ? 'Comments' : 'Comment' %}
-        <i class="post-meta__icon">
-            <svg height="9" viewbox="0 0 10 9" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7.967-.052H1.134C.487-.052-.04.475-.04 1.123v4.758c0 .647.527 1.171 1.174 1.171h3.91c.086 0 .173.037.234.099l1.943 1.791c.108.105.287.062.287-.089v-1.56c0-.185.117-.244.302-.244h.03c.648 0 1.299-.52 1.299-1.171V1.123A1.17 1.17 0 0 0 7.967-.052z" fill="#7e7e7d"/></svg>
-        </i>
-        <span class="bold">{{ commentsLength }}</span>
-        {{comments}}
-    </div>
-    <div class="post-meta__time">
-        <i class="post-meta__icon">
-            <svg height="9" viewbox="0 0 10 9" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M5.548 7.063c0 .284-.206.49-.49.49a.474.474 0 0 1-.489-.49V4.41a.043.043 0 0 0-.005-.018l-.722-1.333a.493.493 0 0 1 .167-.662l.003-.002a.493.493 0 0 1 .67.162l.01.016.734 1.358c.08.15.122.315.122.479zm2.716-5.79a4.526 4.526 0 1 0-6.402 6.402 4.526 4.526 0 0 0 6.402-6.402z" fill="#7e7e7d"/></svg>
-        </i>
-        <span class="bold">{{ post.read_time | e('esc_html')}}</span>
-        Min Read
-    </div>
-
+			{{ post.author }}
+		</a>
+	</div>
+	<div class="post-meta__comment">
+		{% set commentsLength = post.comments | length %} {% set comments =
+		commentsLength > 1 ? 'Comments' : 'Comment' %}
+		<i class="post-meta__icon">
+			<svg
+				height="9"
+				viewbox="0 0 10 9"
+				width="10"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M7.967-.052H1.134C.487-.052-.04.475-.04 1.123v4.758c0 .647.527 1.171 1.174 1.171h3.91c.086 0 .173.037.234.099l1.943 1.791c.108.105.287.062.287-.089v-1.56c0-.185.117-.244.302-.244h.03c.648 0 1.299-.52 1.299-1.171V1.123A1.17 1.17 0 0 0 7.967-.052z"
+					fill="#7e7e7d"
+				/>
+			</svg>
+		</i>
+		<span class="bold">{{ commentsLength }}</span>
+		{{ comments }}
+	</div>
+	<div class="post-meta__time">
+		<i class="post-meta__icon">
+			<svg
+				height="9"
+				viewbox="0 0 10 9"
+				width="10"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M5.548 7.063c0 .284-.206.49-.49.49a.474.474 0 0 1-.489-.49V4.41a.043.043 0 0 0-.005-.018l-.722-1.333a.493.493 0 0 1 .167-.662l.003-.002a.493.493 0 0 1 .67.162l.01.016.734 1.358c.08.15.122.315.122.479zm2.716-5.79a4.526 4.526 0 1 0-6.402 6.402 4.526 4.526 0 0 0 6.402-6.402z"
+					fill="#7e7e7d"
+				/>
+			</svg>
+		</i>
+		<span class="bold">{{ post.read_time | e('esc_html')}}</span>
+		Min Read
+	</div>
 </div>
