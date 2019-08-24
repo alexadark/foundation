@@ -120,4 +120,8 @@ select:-webkit-autofill:focus {
 			color: $salmon !important;
 		}
 	}
+	label {
+		transform: translate(0);
+		font-size: 1.2rem !important;
+	}
 }
