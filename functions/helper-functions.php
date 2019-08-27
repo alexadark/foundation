@@ -55,61 +55,67 @@ function change_wp_search_size($query)
 }
 add_filter('pre_get_posts', 'change_wp_search_size'); // Hook our custom function onto the request filter
 
-function wpb_set_post_views($postID) {
-    $count_key = 'wpb_post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '1');
-    }else{
-        $count++;
-        update_post_meta($postID, $count_key, $count);
-    }
+function wpb_set_post_views($postID)
+{
+	$count_key = 'wpb_post_views_count';
+	$count = get_post_meta($postID, $count_key, true);
+	if ($count == '') {
+		$count = 0;
+		delete_post_meta($postID, $count_key);
+		add_post_meta($postID, $count_key, '1');
+	} else {
+		$count++;
+		update_post_meta($postID, $count_key, $count);
+	}
 }
 //To keep the count accurate, lets get rid of prefetching
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-function wpb_track_post_views ($post_id) {
-    if ( !is_single() ) return;
-    if ( empty ( $post_id) ) {
-        global $post;
-        $post_id = $post->ID;
-    }
-    wpb_set_post_views($post_id);
+function wpb_track_post_views($post_id)
+{
+	if (!is_single()) return;
+	if (empty($post_id)) {
+		global $post;
+		$post_id = $post->ID;
+	}
+	wpb_set_post_views($post_id);
 }
-add_action( 'wp_head', 'wpb_track_post_views');
+add_action('wp_head', 'wpb_track_post_views');
 
-function wpb_get_post_views($postID){
-    $count_key = 'wpb_post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-        return "0 View";
-    }
-    return $count.' Views';
+function wpb_get_post_views($postID)
+{
+	$count_key = 'wpb_post_views_count';
+	$count = get_post_meta($postID, $count_key, true);
+	if ($count == '') {
+		delete_post_meta($postID, $count_key);
+		add_post_meta($postID, $count_key, '0');
+		return "0 View";
+	}
+	return $count . ' Views';
 }
 
-function select_sort_dropdown($current){
-    if(isset($_GET['sort'])) {
-        if($current == $_GET['sort'])
-            echo 'selected';
-    }
+function select_sort_dropdown($current)
+{
+	if (isset($_GET['sort'])) {
+		if ($current == $_GET['sort'])
+			echo 'selected';
+	}
 }
-function select_cat_dropdown($active_cat, $current_cat){
-    echo $active_cat .' - '. $current_cat;
-    if($active_cat == $current_cat) {
-        echo ' selected';
-    }
+function select_cat_dropdown($active_cat, $current_cat)
+{
+	echo $active_cat . ' - ' . $current_cat;
+	if ($active_cat == $current_cat) {
+		echo ' selected';
+	}
 }
-function init_post_views(){
-    $post_ids = get_posts(array(
-        'post_type'     =>'post',
-        'fields'        => 'ids',
-        'showposts'     => -1
-    ));
-    foreach($post_ids as $post_id){
-        wpb_get_post_views($post_id);
-    }
+function init_post_views()
+{
+	$post_ids = get_posts(array(
+		'post_type'     => 'post',
+		'fields'        => 'ids',
+		'showposts'     => -1
+	));
+	foreach ($post_ids as $post_id) {
+		wpb_get_post_views($post_id);
+	}
 }
