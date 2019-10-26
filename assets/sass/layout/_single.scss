@@ -8,6 +8,9 @@
 			background: $light-white;
 			padding-top: 15px;
 		}
+		p a {
+			text-decoration: underline;
+		}
 	}
 	.article-body {
 		z-index: 10;
