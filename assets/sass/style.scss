@@ -10,3 +10,19 @@
 @import 'vendors/vendors';
 @import 'components/components';
 @import 'helper-classes';
+
+.blog,
+.content-strategy-planning-page,
+.secondary-research-page,
+.personas-page,
+.contact-page {
+	.hero__buttons {
+		display: none;
+	}
+}
+
+.single-post {
+	.cta {
+		display: none;
+	}
+}
