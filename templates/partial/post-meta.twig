@@ -1,14 +1,15 @@
 <div class="post-meta">
-    <div class="post-meta__author">
-        <a href="/author/{{ post.author.slug }}">
-            <i class="post-meta__icon">
-                <svg height="9" viewbox="0 0 9 9" width="9" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.166 5.63c1.38 0 4.166.703 4.166 2.083v1.042H0V7.713C0 6.333 2.786 5.63 4.166 5.63zM2.083 2.506A2.09 2.09 0 0 1 4.166.423a2.09 2.09 0 0 1 2.083 2.083 2.09 2.09 0 0 1-2.083 2.083 2.09 2.09 0 0 1-2.083-2.083z" fill="#faf5ef"/>
-                </svg>
-            </i>
+    <div
+        class="post-meta__author">
+        {# <a href="/author/{{ post.author.slug }}"> #}
+        <i class="post-meta__icon">
+            <svg height="9" viewbox="0 0 9 9" width="9" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.166 5.63c1.38 0 4.166.703 4.166 2.083v1.042H0V7.713C0 6.333 2.786 5.63 4.166 5.63zM2.083 2.506A2.09 2.09 0 0 1 4.166.423a2.09 2.09 0 0 1 2.083 2.083 2.09 2.09 0 0 1-2.083 2.083 2.09 2.09 0 0 1-2.083-2.083z" fill="#faf5ef"/>
+            </svg>
+        </i>
 
-            {{ post.author }}
-        </a>
+        {{ post.author }}
+        {# </a> #}
     </div>
     <div class="post-meta__comment">
         {% set commentsLength = post.comments | length %}
