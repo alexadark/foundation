@@ -1,0 +1,10 @@
+.job-posting-page {
+	.wrapped {
+		max-width: 1170px;
+		margin: 0 auto;
+		padding-top: 60px;
+		@include min-screen($m) {
+			padding: 60px 53px;
+		}
+	}
+}
