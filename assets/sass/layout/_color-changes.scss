@@ -1,0 +1,47 @@
+.about-page {
+	.text-image.bg-black.agency-first.first,
+	.steps.bg-black,
+	.cta-button.bg-black,
+	.image-block.bg-black {
+		background: $white;
+		h2,
+		h4 {
+			color: $salmon;
+		}
+		p {
+			color: $darkest-grey;
+		}
+	}
+}
+
+.industry-solutions-page {
+	.title-cols,
+	.featured-sites {
+		background: $white;
+	}
+}
+.research-page {
+	.text-image.bg-black.first,
+	.title-cols.bg-black,
+	.steps,
+	.image-block,
+	.cta-button {
+		background: $white;
+		.text-image__text h2,
+		h3,
+		h4 {
+			color: $salmon;
+		}
+		.title-cols__item,
+		p {
+			color: $darkest-grey;
+		}
+		.steps__title span {
+			color: $darkest-grey;
+		}
+	}
+	.steps .brick-word,
+	.steps__intro {
+		color: $darkest-grey;
+	}
+}

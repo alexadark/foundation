@@ -44,7 +44,7 @@ body {
 			padding: 60px 55px;
 		}
 
-		background: $light-white;
+		background: $white;
 	}
 	&__dd {
 		@include flexbox;
@@ -110,8 +110,10 @@ body {
 			max-width: 1170px;
 			position: relative;
 			top: -120px;
-			background: $light-white;
+			background: $white;
 			padding: 0 30px;
+			z-index: 10;
+
 			@include min-screen($m) {
 				padding: 0 53px;
 			}

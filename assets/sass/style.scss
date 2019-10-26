@@ -16,7 +16,8 @@
 .secondary-research-page,
 .personas-page,
 .contact-page,
-.job-posting-page {
+.job-posting-page,
+.research-page {
 	.hero__buttons {
 		display: none;
 	}
@@ -26,4 +27,63 @@
 	.cta {
 		display: none;
 	}
+}
+
+.research-page {
+	.cta-button {
+		display: none;
+	}
+}
+
+.single-service {
+	background: $white;
+	.text-image.bg-black:not(.services-first),
+	.steps.bg-black,
+	.bubbles.bg-black,
+	.featured-sites {
+		background: $white;
+		h2,
+		h4 {
+			color: $salmon;
+		}
+		p {
+			color: $darkest-grey;
+		}
+		.bubbles__content {
+			color: $darkest-grey;
+		}
+		.bubbles__bubble {
+			border-color: $white;
+			box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15);
+		}
+	}
+	.text-image.full-service {
+		h2.text-image__title:not(.text-center) {
+			color: $darkest-grey;
+		}
+	}
+}
+
+.services-page {
+	.text-image.bg-black:not(.services-first),
+	.featured-sites.second,
+	.title-cols,
+	.featured-sites {
+		background: $white;
+		h2 {
+			color: $darkest-grey;
+		}
+		p {
+			color: $darkest-grey;
+		}
+	}
+	.decorated-title h2 {
+		color: $salmon !important;
+	}
+}
+.blockquote2.curve-black:before {
+	content: url(./assets/img/curve-black-1440.svg);
+	top: -180px;
+	position: absolute;
+	left: 0;
 }
