@@ -7,7 +7,9 @@
         </div>
         {% for item in block.openings %}
             <div class="openings__item">
-                <div class="brown bold">{{ item.position | e('esc_html')}}</div>
+                <div class="brown bold">
+                    <a href={{ item.link['url'] | e('esc_url')}}>{{ item.position | e('esc_html')}}</a>
+                </div>
                 <div class="brown bold">{{ item.status | e('esc_html')}}</div>
             </div>
         {% endfor %}

@@ -436,6 +436,21 @@
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5db402cac6ac5",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
                                 }
                             ]
                         },
@@ -2400,7 +2415,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
             }
         ]
     ],
@@ -2412,12 +2441,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_permissions": "",
-    "acfe_note": "",
-    "acfe_meta": "",
-    "modified": 1563272620
+    "modified": 1572079117
 }
