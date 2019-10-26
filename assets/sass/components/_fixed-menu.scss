@@ -9,6 +9,7 @@
 	transition: $transition4;
 	visibility: hidden;
 	display: none;
+	line-height: 40px;
 	.fixed-hide {
 		display: none;
 	}
@@ -64,7 +65,7 @@
 
 			a {
 				color: $black;
-				font-size: 1.2rem;
+				font-size: 1.4rem;
 				text-transform: uppercase;
 				font-family: 'Avenir';
 				font-weight: bold;
