@@ -103,7 +103,7 @@ function select_sort_dropdown($current)
 }
 function select_cat_dropdown($active_cat, $current_cat)
 {
-	echo $active_cat . ' - ' . $current_cat;
+	//echo $active_cat . ' - ' . $current_cat;
 	if ($active_cat == $current_cat) {
 		echo ' selected';
 	}

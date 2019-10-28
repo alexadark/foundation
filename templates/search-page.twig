@@ -18,9 +18,11 @@
                     <span class="bold uppercase">Category:
                     </span>
                     <select id="cat-select" onchange="location=this.value;">
-                        <option value="?s={{ fn('the_search_query') }}">View All &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="?s= {{ {'s': fn('the_search_query') }| url_encode }}">View All &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                         {% for cat in cats %}
-                            <option {{ function('select_cat_dropdown', active_cat, cat.slug ) }} value="?s={{ fn('the_search_query') }}&cat={{ cat.slug }}">{{ cat.name }}</option>
+                            <option {{ function('select_cat_dropdown', active_cat, cat.slug ) }}
+                                    value="?s={{ fn('the_search_query') }}&cat={{ cat.slug | url_encode}}">{{ cat.name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
