@@ -38,7 +38,7 @@
 		@include min-screen(810px) {
 			flex-basis: 25%;
 		}
-		@include max-screen($xl) {
+		@include min-screen($xl) {
 			max-width: 250px;
 		}
 
@@ -46,7 +46,7 @@
 		margin-bottom: 10px;
 
 		&--wrap {
-			max-width: 250px;
+			//max-width: 250px;
 			padding: 54px 0 10px 12px;
 			border-radius: 4px;
 			box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
