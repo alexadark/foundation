@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
+    <section class="wrapper">
 
-    <div class="wrapper">
         {% set result = posts | length > 1 ? 'Results' : 'Result' %}
         <h1 class="font42 light-pink text-center">
             {{ posts | length }}
@@ -11,6 +11,23 @@
         <div class="search__search">
             {% include "partial/searchform.twig" %}
         </div>
+
+        <section class="search-cat">
+            <div class="lab__dd">
+                <div class="search-cats">
+                    <span class="bold uppercase">Category:
+                    </span>
+                    <select id="cat-select" onchange="location=this.value;">
+                        <option value="?s={{ fn('the_search_query') }}">View All &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        {% for cat in cats %}
+                            <option {{ function('select_cat_dropdown', active_cat, cat.slug ) }} value="?s={{ fn('the_search_query') }}&cat={{ cat.slug }}">{{ cat.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
         {% for post in posts %}
             <article>
                 {% set postType = post.post_type %}
@@ -34,6 +51,8 @@
                 </div>
             </article>
         {% endfor %}
+
+        {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3}) } %}
 
         {% include "partial/featured-services-option.twig" %}
     </div>

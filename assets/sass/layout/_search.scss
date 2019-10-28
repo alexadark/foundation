@@ -43,9 +43,28 @@
 		}
 	}
 	article,
-	&__search {
+	&__search, .search-cat {
 		max-width: 760px;
 		margin: 0 auto;
+	}
+	section.search-cat{
+		.lab__dd{
+			margin:0;
+			padding:0;
+			justify-content: left;
+			span{
+				margin-right: 10px;
+			}
+		}
+	}
+	.search-cats{
+		@include min-screen($m) {
+			display: flex;
+			align-items: center;
+		}
+		.selectric{
+			min-width:240px;
+		}
 	}
 	.post {
 		&__header {

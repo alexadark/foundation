@@ -29,7 +29,7 @@ function wst_styles_and_scripts()
 	wp_enqueue_script('fancybox-js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', ['jquery'], '3.5.7', true);
 
 
-	if (is_archive() or is_home()) {
+	if (is_archive() or is_home() or is_search()) {
 		wp_enqueue_script('selectric-js', THEME_JS . '/selectric.min.js', ['jquery'], '1.13.0', true);
 	}
 }
