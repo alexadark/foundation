@@ -9,7 +9,7 @@
 	transition: $transition4;
 	visibility: hidden;
 	display: none;
-	line-height: 40px;
+	line-height: 30px;
 	.fixed-hide {
 		display: none;
 	}
@@ -65,7 +65,7 @@
 
 			a {
 				color: $black;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				text-transform: uppercase;
 				font-family: 'Avenir';
 				font-weight: bold;
@@ -73,7 +73,7 @@
 					color: $light-pink;
 				}
 			}
-			ul {
+			> ul {
 				opacity: 0;
 				visibility: hidden;
 				position: absolute;
@@ -102,6 +102,36 @@
 			position: absolute;
 			top: 0;
 			right: -20px;
+		}
+		ul{
+			-webkit-transition: none;
+			-moz-transition: none ;
+			-ms-transition: none ;
+			-o-transition: none ;
+			transition: none ;
+		}
+		&.active {
+			&:after{
+				content: url(./assets/img/top-menu-arrow-white.svg);
+				top:2px;
+			}
+				//.menu-item-has-children{
+					&.active ul{
+						opacity:1;
+						visibility: visible;
+						position: inherit;
+						display: block;
+						margin:0;
+						top: 0;
+						padding-top: 0;
+						padding-bottom: 0;
+
+					}
+				//}
+			&:after {
+				transform-origin: center center;
+				transform: rotate(180deg);
+			}
 		}
 	}
 	.top-menu-login a {
