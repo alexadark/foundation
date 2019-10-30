@@ -52,7 +52,7 @@
 			//box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 			position: relative;
 			transition: $transition4;
-			&:hover {
+			/*&:hover {
 				@include min-screen(810px) {
 					transform: translateY(-15px);
 				}
@@ -64,7 +64,7 @@
 				.featured-services__item--title {
 					color: $blue;
 				}
-			}
+			}*/
 		}
 		&--overlay {
 			position: absolute;
