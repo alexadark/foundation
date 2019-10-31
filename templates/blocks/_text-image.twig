@@ -16,6 +16,12 @@
                             <div class="text-image__subtext">{{ item.subtext | e('wp_kses_post') | wpautop}}</div>
 
                         {% endif %}
+                        {% if item.link %}
+                            <div class="cta-button">
+                                <a href="{{ item.link['url'] | e('esc_url')}}" class="button button--{{item.color  | e('esc_html')}} ">{{ item.link['title'] | e('esc_html')}}
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="text-image__image">
                         <img src="{{ TimberImage(item.image) | e('esc_html')}}" alt="">

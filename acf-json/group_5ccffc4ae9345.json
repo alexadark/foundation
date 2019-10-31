@@ -728,13 +728,10 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_validate": "",
-                            "acfe_update": "",
-                            "acfe_permissions": "",
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "",
                             "sub_fields": [
                                 {
@@ -808,6 +805,40 @@
                                     "maxlength": "",
                                     "rows": 3,
                                     "new_lines": ""
+                                },
+                                {
+                                    "key": "field_5dbb4b9617394",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_5dbb4ba117395",
+                                    "label": "Button Color",
+                                    "name": "color",
+                                    "type": "text",
+                                    "instructions": "3 possible colors: salmon, blue, dark",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         },
@@ -2441,5 +2472,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572079117
+    "modified": 1572556168
 }
