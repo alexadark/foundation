@@ -55,4 +55,14 @@
 			margin-right: 5px;
 		}
 	}
+	&.white-bg {
+		background: $white;
+		padding-bottom: 0;
+		h4 {
+			color: $salmon;
+		}
+		.steps__item-content {
+			color: $base-color;
+		}
+	}
 }
