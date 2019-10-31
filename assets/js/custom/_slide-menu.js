@@ -13,7 +13,7 @@ itemsWithChildrens.forEach(item =>
 		if ($diff <= 40) {
 			item.classList.toggle('active');
 		} else {
-			//console.log('clicked not after' + (jQuery(item).width() +' - '+ e.offsetX) +' = ' + $diff);
+			console.log('clicked not after' + (jQuery(item).width() +' - '+ e.offsetX) +' = ' + $diff);
 		}
 	})
 );

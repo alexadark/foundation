@@ -48,11 +48,16 @@
 				}
 				&.active {
 					ul {
-						// visibility: visible;
-						// opacity: 1;
-						// height: auto;
-
 						display: block;
+
+						.menu-item-has-children{
+							ul{
+								display: none;
+							}
+							&.active ul{
+								display: block;
+							}
+						}
 					}
 					&:after {
 						transform-origin: center center;

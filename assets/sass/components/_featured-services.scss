@@ -38,7 +38,7 @@
 		@include min-screen(810px) {
 			flex-basis: 25%;
 		}
-		@include max-screen($xl) {
+		@include min-screen($xl) {
 			max-width: 250px;
 		}
 
@@ -46,13 +46,13 @@
 		margin-bottom: 10px;
 
 		&--wrap {
-			max-width: 250px;
+			//max-width: 250px;
 			padding: 54px 0 10px 12px;
 			border-radius: 4px;
-			box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+			//box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 			position: relative;
 			transition: $transition4;
-			&:hover {
+			/*&:hover {
 				@include min-screen(810px) {
 					transform: translateY(-15px);
 				}
@@ -64,7 +64,7 @@
 				.featured-services__item--title {
 					color: $blue;
 				}
-			}
+			}*/
 		}
 		&--overlay {
 			position: absolute;
@@ -79,7 +79,7 @@
 		}
 		&--content {
 			background: $light-white;
-			box-shadow: -9px 10px 15px rgba(0, 0, 0, 0.4);
+			//box-shadow: -9px 10px 15px rgba(0, 0, 0, 0.4);
 			border-radius: 4px 0 0 4px;
 			padding: 25px 25px 30px;
 			margin-bottom: 10px;
@@ -110,5 +110,8 @@
 	}
 	a:hover {
 		color: $blue;
+	}
+	.slick-arrow{
+		display: none!important;
 	}
 }
