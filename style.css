@@ -3562,6 +3562,12 @@ div.gfield_creditcard_warning_message {
 .budget-field {
   padding-top: 30px !important; }
 
+.single-post .booking-form {
+  padding: 50px 0; }
+  .single-post .booking-form .wrapper {
+    top: 0;
+    background: transparent; }
+
 input[type='submit'] {
   padding: 18px 15px;
   background: #dd6052;

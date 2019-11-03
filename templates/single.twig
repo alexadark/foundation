@@ -30,6 +30,31 @@
 
                         {{ post.content }}
                     </div>
+
+                    <div class="booking-form bg-black {{ class }}" id="scrollTo">
+                        <div class="wrapper">
+                            {% if options.signup_text %}
+                                <div class="booking-form__text">
+                                    <h3 class="booking-form__title font32 bold light-pink">{{ options.signup_title | e('esc_html')}}</h3>
+                                    <div class="booking-form__content">{{ options.signup_text | e('esc_html')}}</div>
+                                </div>
+                            {% endif %}
+                            <div class="booking-form__form">
+                                {% set signup_form_id = options.signup_form_id %}
+                                {% if options.signup_form_id !="" %}
+                                    {{ fn('do_shortcode','[gravityform id='~ signup_form_id ~ ' title=false description=false ajax=true]') }}
+                                {% else %}
+                                    {% set form =  block.form | e('esc_html') %}
+                                    {{ fn('do_shortcode','[gravityform id='~ form ~ ' title=false description=false ajax=true]') }}
+                                {% endif %}
+                            </div>
+
+
+                        </div>
+                        <div id="form-bottom"></div>
+                    </div>
+
+
                     {% include "blocks/block-logic.twig" %}
                     <div class="wrap700">
                         <div class="share-bottom">
@@ -43,7 +68,11 @@
                             %}
                         {% endif %}
                     </div>
+
                 </div>
+
+
+
                 {{ function('comments_template') }}
                 {% include "partial/related-posts.twig" %}
             </div>
