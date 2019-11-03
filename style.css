@@ -3353,6 +3353,9 @@ div.gfield_creditcard_warning_message {
 .search .featured-services {
   transform: translateY(0); }
 
+.page .featured-services {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(30%, #21232b)); }
+
 .featured-sites {
   padding: 25px 0 100px; }
   .featured-sites.curve-black {
