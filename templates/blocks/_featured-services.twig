@@ -28,7 +28,7 @@
                 {% endfor %}
             </div>
             {% if block.link %}
-                <a class="featured-services__link" href="{{ block.link['url'] | e('esc_url')}}"><img src="{{theme.path}}/assets/img/arrow-right-round-red.svg" alt="">{{ block.link['title'] | e('wp_kses_post')}}</a>
+                <a class="featured-services__link" href="{{ block.link['url'] | e('esc_url')}}"><img src="{{theme.path}}/assets/img/arrow-right-round-red.svg" alt="">{{ block.link['title'] }}</a>
 
             {% endif %}
 

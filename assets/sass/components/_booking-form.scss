@@ -78,9 +78,39 @@
 .single-post {
 	.booking-form{
 		padding:50px 0;
+		margin-top: -60px;
 		.wrapper{
 			top:0;
 			background: transparent;
+			transform: translateY(-30px);
+		}
+		&:before {
+			content: '';
+			background: url('./assets/img/curve-black-1440.svg');
+			width: 100%;
+			background-size: cover;
+			position: absolute;
+			top: -47px;
+			height: 48px;
+			@include min-screen(450px) {
+				top: -75px;
+				height: 76px;
+			}
+			@include min-screen($m) {
+				top: -125px;
+				height: 126px;
+			}
+			@include min-screen($l) {
+				top: -180px;
+				height: 181px;
+			}
+			@include min-screen(1440px) {
+				top: -300px;
+				height: 301px;
+			}
 		}
 	}
+}
+.article-body .booking-form{
+	display: none;
 }

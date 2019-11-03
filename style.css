@@ -3334,9 +3334,9 @@ div.gfield_creditcard_warning_message {
   .featured-services a:hover {
     color: #246fc9; }
 
-.services-page .featured-services, .page-child .featured-services {
+.services-page .featured-services, .page-child .featured-services, .search .featured-services {
   position: relative; }
-  .services-page .featured-services:after, .page-child .featured-services:after {
+  .services-page .featured-services:after, .page-child .featured-services:after, .search .featured-services:after {
     content: '';
     display: block;
     background: #21232b;
@@ -3347,8 +3347,11 @@ div.gfield_creditcard_warning_message {
     width: 100%;
     z-index: -1; }
   @media only screen and (min-width: 1024px) {
-    .services-page .featured-services, .page-child .featured-services {
+    .services-page .featured-services, .page-child .featured-services, .search .featured-services {
       background: transparent; } }
+
+.search .featured-services {
+  transform: translateY(0); }
 
 .featured-sites {
   padding: 25px 0 100px; }
@@ -3563,10 +3566,39 @@ div.gfield_creditcard_warning_message {
   padding-top: 30px !important; }
 
 .single-post .booking-form {
-  padding: 50px 0; }
+  padding: 50px 0;
+  margin-top: -60px; }
   .single-post .booking-form .wrapper {
     top: 0;
-    background: transparent; }
+    background: transparent;
+    transform: translateY(-30px); }
+  .single-post .booking-form:before {
+    content: '';
+    background: url("./assets/img/curve-black-1440.svg");
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: -47px;
+    height: 48px; }
+    @media only screen and (min-width: 450px) {
+      .single-post .booking-form:before {
+        top: -75px;
+        height: 76px; } }
+    @media only screen and (min-width: 768px) {
+      .single-post .booking-form:before {
+        top: -125px;
+        height: 126px; } }
+    @media only screen and (min-width: 1024px) {
+      .single-post .booking-form:before {
+        top: -180px;
+        height: 181px; } }
+    @media only screen and (min-width: 1440px) {
+      .single-post .booking-form:before {
+        top: -300px;
+        height: 301px; } }
+
+.article-body .booking-form {
+  display: none; }
 
 input[type='submit'] {
   padding: 18px 15px;
