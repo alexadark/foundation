@@ -3,6 +3,14 @@
 }
 .tease-post__media {
 	position: relative;
+	a{
+		max-height: 312px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+	}
 }
 .video-duration {
 	position: absolute;
