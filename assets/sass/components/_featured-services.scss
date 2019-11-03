@@ -2,12 +2,14 @@
 	padding-bottom: 100px;
 	background: $black;
 	@include min-screen($l) {
-		background: linear-gradient(180deg, transparent 15%, $black 15%);
+		//background: linear-gradient(180deg, transparent 15%, $black 15%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #21232b), color-stop(40%, #faf5ef));
 	}
 	@include min-screen($l) {
 		transform: translateY(-62px);
 		&.no-padding {
 			transform: translateY(-50px);
+			padding-bottom: 20px;
 		}
 	}
 
@@ -111,7 +113,23 @@
 	a:hover {
 		color: $blue;
 	}
-	.slick-arrow{
-		display: none!important;
+}
+.services-page, .page-child{
+	.featured-services{
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			background: $black;
+			height: 20%;
+			position: absolute;
+			top: 50px;
+			border: none;
+			width: 100%;
+			z-index: -1;
+		}
+		@include min-screen($l) {
+			background: transparent;
+		}
 	}
 }

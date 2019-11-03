@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	$('.featured-services__container').slick({
 		autoplay: false,
 		speed: 1000,
-		arrow: false,
+		arrow: true,
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 4,
