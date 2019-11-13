@@ -3,7 +3,13 @@
 	background: $black;
 	@include min-screen($l) {
 		//background: linear-gradient(180deg, transparent 15%, $black 15%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #21232b), color-stop(40%, #faf5ef));
+		background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(40%, #21232b),
+			color-stop(40%, #faf5ef)
+		);
 	}
 	@include min-screen($l) {
 		transform: translateY(-62px);
@@ -114,10 +120,12 @@
 		color: $blue;
 	}
 }
-.services-page, .page-child, .search{
-	.featured-services{
+.services-page,
+.page-child,
+.search {
+	.featured-services {
 		position: relative;
-		&:after{
+		&:after {
 			content: '';
 			display: block;
 			background: $black;
@@ -133,17 +141,27 @@
 		}
 	}
 }
-.search{
-	.featured-services{
+.search {
+	.featured-services {
 		transform: translateY(0);
 	}
 }
-.page:not(.home-page){
-	.featured-services{
-		&.dark-bg{
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(30%, #21232b));
-			a.featured-services__link{
+.page:not(.home-page) {
+	.featured-services {
+		&.dark-bg {
+			background: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				color-stop(20%, transparent),
+				color-stop(30%, $black)
+			);
+			a.featured-services__link {
 				color: $light-blue;
+				transition: all 0.4s ease-in-out;
+				&:hover {
+					color: $salmon;
+				}
 			}
 		}
 	}
