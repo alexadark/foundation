@@ -56,7 +56,7 @@
 		margin-top: 10px;
 		display: inline-block;
 		&:after {
-			content: ',';
+			content: ",";
 			color: $blue;
 			margin-right: 7px;
 		}
@@ -159,9 +159,9 @@
 
 .small-posts-wrapper,
 .category .posts-wrapper {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	// display: flex;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
 	@include max-screen(1010px) {
 		flex-wrap: wrap;
 	}

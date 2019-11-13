@@ -3,16 +3,15 @@
  * Description: Starter Theme to use with Timber
  * Author: Alexandra Spalato
 */
-@import 'helpers/helpers';
+@import "helpers/helpers";
 // @import 'flexgrid/main';
-@import 'base/base';
-@import 'layout/layout';
-@import 'vendors/vendors';
-@import 'components/components';
-@import 'helper-classes';
+@import "base/base";
+@import "layout/layout";
+@import "vendors/vendors";
+@import "components/components";
+@import "helper-classes";
 
 .blog,
-.content-strategy-planning-page,
 .secondary-research-page,
 .personas-page,
 .contact-page,

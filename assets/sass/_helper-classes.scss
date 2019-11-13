@@ -73,3 +73,25 @@
 .mt-minus-50 {
 	margin-top: -50px;
 }
+
+.wrapped {
+	max-width: 1170px;
+	margin: 0 auto;
+	&:first-child {
+		padding-top: 60px;
+	}
+}
+
+.mb {
+	padding-bottom: 80px;
+	&-big {
+		padding-bottom: 150px;
+	}
+}
+
+.mt {
+	padding-top: 80px;
+	&-big {
+		padding-top: 150px;
+	}
+}
