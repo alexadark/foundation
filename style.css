@@ -806,7 +806,8 @@ img.alignright,
 .footer {
   overflow: hidden;
   z-index: 100;
-  position: relative; }
+  position: relative;
+  background-color: #246fc9; }
   .footer .wrapper {
     max-width: 870px; }
 
@@ -2047,14 +2048,14 @@ div.gfield_creditcard_warning_message {
 .slick-next {
   position: absolute;
   display: block;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   line-height: 0px;
-  font-size: 0px;
+  font-size: 60px;
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -2073,14 +2074,14 @@ div.gfield_creditcard_warning_message {
       opacity: 1; }
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
-    opacity: 0.25; }
+    opacity: 1; }
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
-    font-size: 40px;
+    font-size: 60px;
     line-height: 1;
     color: white;
-    opacity: 0.75;
+    opacity: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: block;
@@ -2090,7 +2091,7 @@ div.gfield_creditcard_warning_message {
       .slick-prev:before,
       .slick-next:before {
         color: #21232b; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .slick-prev,
     .slick-next {
       display: none;
@@ -2098,37 +2099,34 @@ div.gfield_creditcard_warning_message {
       z-index: -10; } }
 
 .slick-prev {
-  left: -52px; }
+  z-index: 9;
+  left: -90px; }
   @media only screen and (max-width: 1170px) {
     .slick-prev {
-      left: -40px; } }
+      left: -60px; } }
   [dir='rtl'] .slick-prev {
     left: auto;
     right: -25px; }
   .slick-prev:before {
     content: "←";
-    color: transparent;
-    background: url("./assets/img/arrow_left.png") center center no-repeat;
-    background-size: 40px; }
+    color: transparent; }
     [dir='rtl'] .slick-prev:before {
       content: "→"; }
 
 .slick-next {
-  right: -25px; }
+  right: -65px; }
   @media only screen and (max-width: 1280px) {
     .slick-next {
-      right: -45px; } }
+      right: -82px; } }
   @media only screen and (max-width: 1170px) {
     .slick-next {
-      right: -35px; } }
+      right: -45px; } }
   [dir='rtl'] .slick-next {
     right: auto;
     left: -25px; }
   .slick-next:before {
     content: "→";
-    color: transparent;
-    background: url("./assets/img/arrow_right.png") center center no-repeat;
-    background-size: 40px; }
+    color: transparent; }
     [dir='rtl'] .slick-next:before {
       content: "←"; }
 
@@ -2181,12 +2179,12 @@ div.gfield_creditcard_warning_message {
         line-height: 20px;
         text-align: center;
         color: black;
-        opacity: 0.25;
+        opacity: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
     .slick-dots li.slick-active button:before {
       color: black;
-      opacity: 0.75; }
+      opacity: 1; }
 
 .slick-dots li button:before {
   content: ''; }
@@ -3357,6 +3355,40 @@ div.gfield_creditcard_warning_message {
       margin-right: 10px; }
   .featured-services a:hover {
     color: #246fc9; }
+  .featured-services .slick-prev {
+    z-index: 9;
+    left: -110px; }
+    @media only screen and (max-width: 1170px) {
+      .featured-services .slick-prev {
+        left: -60px; } }
+    [dir='rtl'] .featured-services .slick-prev {
+      left: auto;
+      right: -25px; }
+    .featured-services .slick-prev:before {
+      content: "←";
+      color: transparent;
+      content: url("./assets/img/arrow_left.png");
+      transform: scale(0.6); }
+      [dir='rtl'] .featured-services .slick-prev:before {
+        content: "→"; }
+  .featured-services .slick-next {
+    right: -65px; }
+    @media only screen and (max-width: 1280px) {
+      .featured-services .slick-next {
+        right: -82px; } }
+    @media only screen and (max-width: 1170px) {
+      .featured-services .slick-next {
+        right: -45px; } }
+    [dir='rtl'] .featured-services .slick-next {
+      right: auto;
+      left: -25px; }
+    .featured-services .slick-next:before {
+      content: "→";
+      color: transparent;
+      content: url("./assets/img/arrow_right.png");
+      transform: scale(0.6); }
+      [dir='rtl'] .featured-services .slick-next:before {
+        content: "←"; }
 
 .services-page .featured-services, .page-child .featured-services, .search .featured-services {
   position: relative; }
@@ -3378,7 +3410,7 @@ div.gfield_creditcard_warning_message {
   transform: translateY(0); }
 
 .page:not(.home-page) .featured-services.dark-bg {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(30%, #21232b)); }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(26%, #21232b)); }
   .page:not(.home-page) .featured-services.dark-bg a.featured-services__link {
     color: #7db6ef; }
 

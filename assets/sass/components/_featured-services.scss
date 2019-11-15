@@ -113,6 +113,55 @@
 	a:hover {
 		color: $blue;
 	}
+
+	.slick-prev {
+		z-index: 9;
+		left: -110px;
+		@include max-screen(1170px){
+			left:-60px;
+		}
+		[dir='rtl'] & {
+			left: auto;
+			right: -25px;
+		}
+		&:before {
+			content: $slick-prev-character;
+			[dir='rtl'] & {
+				content: $slick-next-character;
+			}
+			color: transparent;
+			//background: url('./assets/img/arrow_left.png') center center no-repeat;
+			content: url('./assets/img/arrow_left.png');
+			transform: scale(0.6);
+			//background-size: 70px;
+		}
+	}
+
+	.slick-next {
+		right: -65px;
+		@include max-screen($xl){
+			right:-82px;
+		}
+		@include max-screen(1170px){
+			right:-45px;
+		}
+		[dir='rtl'] & {
+			right: auto;
+			left: -25px;
+		}
+		&:before {
+			content: $slick-next-character;
+			[dir='rtl'] & {
+				content: $slick-prev-character;
+			}
+			color: transparent;
+			//background: url('./assets/img/arrow_right.png') center center no-repeat;
+			//background-size: 70px;
+			content: url('./assets/img/arrow_right.png');
+			transform: scale(0.6);
+		}
+	}
+
 }
 .services-page, .page-child, .search{
 	.featured-services{
@@ -141,7 +190,7 @@
 .page:not(.home-page){
 	.featured-services{
 		&.dark-bg{
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(30%, #21232b));
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(26%, #21232b));
 			a.featured-services__link{
 				color: $light-blue;
 			}
