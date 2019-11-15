@@ -30,8 +30,9 @@
         {% endif %}
 
         {% if fn('is_front_page') %}
-            <div class="home-search">
-                {% include "partial/searchform.twig" %}
+            <div
+                class="home-search">
+                {# {% include "partial/searchform.twig" %} #}
                 <div class="home-search__svg">
                     {% include "partial/_butter-animated.twig" %}
                 </div>

@@ -788,7 +788,7 @@
                                     "key": "field_5cd3be4c2220a",
                                     "label": "Subtext",
                                     "name": "subtext",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -797,14 +797,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "acfe_validate": "",
-                                    "acfe_update": "",
-                                    "acfe_permissions": "",
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": 3,
-                                    "new_lines": ""
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
                                 },
                                 {
                                     "key": "field_5dbb4b9617394",
@@ -1760,7 +1757,7 @@
                                     "key": "field_5cd91222f1008",
                                     "label": "Content",
                                     "name": "content",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -1769,14 +1766,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "acfe_validate": "",
-                                    "acfe_update": "",
-                                    "acfe_permissions": "",
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": 4,
-                                    "new_lines": ""
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         },
@@ -2472,5 +2466,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572556168
+    "modified": 1573223094
 }
