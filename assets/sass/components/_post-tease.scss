@@ -166,29 +166,29 @@
 		flex-wrap: wrap;
 	}
 }
-.tease-post--small,
-.category .tease-post {
-	padding-right: 15px;
+// .tease-post--small,
+// .category .tease-post {
+// 	padding-right: 15px;
 
-	@include min-screen(1010px) {
-		flex-basis: 33%;
-	}
+// 	@include min-screen(1010px) {
+// 		flex-basis: 33%;
+// 	}
 
-	display: block;
-	.tease-post__cat {
-		margin-top: 10px;
-	}
-	.tease-post__content--bottom {
-		position: relative;
-		margin-top: 30px;
-	}
-	.tease-post-title {
-		margin-bottom: 30px;
-	}
-	.tease-post__media {
-		padding-right: 0;
-	}
-}
+// 	display: block;
+// 	.tease-post__cat {
+// 		margin-top: 10px;
+// 	}
+// 	.tease-post__content--bottom {
+// 		position: relative;
+// 		margin-top: 30px;
+// 	}
+// 	.tease-post-title {
+// 		margin-bottom: 30px;
+// 	}
+// 	.tease-post__media {
+// 		padding-right: 0;
+// 	}
+// }
 
 .default-img {
 	max-height: 312px;
