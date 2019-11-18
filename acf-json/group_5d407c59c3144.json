@@ -1,0 +1,57 @@
+{
+    "key": "group_5d407c59c3144",
+    "title": "Home buttons",
+    "fields": [
+        {
+            "key": "field_5d407c60ea0a9",
+            "label": "Home Red Button",
+            "name": "home_red_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_validate": "",
+            "acfe_update": "",
+            "acfe_permissions": "",
+            "return_format": "array"
+        },
+        {
+            "key": "field_5da737f3fbe42",
+            "label": "Home Blue Button",
+            "name": "home_blue_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1571239966
+}
