@@ -87,3 +87,13 @@
 	position: absolute;
 	left: 0;
 }
+
+.about-page,
+.services-page,
+.industry-solutions-page {
+	.featured-sites {
+		@include min-screen($m) {
+			padding-bottom: 150px;
+		}
+	}
+}
