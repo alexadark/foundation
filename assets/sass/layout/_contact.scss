@@ -31,4 +31,7 @@
 	.hero__buttons {
 		display: none;
 	}
+	.ginput_container_select select, .ginput_card_field select{
+		background-color: $black;
+	}
 }

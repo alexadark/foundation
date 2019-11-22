@@ -2,7 +2,7 @@
     <ul>
         {% for item in menu %}
             <li class="{{ item.classes | join(' ') }}">
-                <a class="bold light-pink" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                <a class="top-menu-link bold light-pink" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
                 {% include "menu.twig" with {'menu': item.children} %}
             </li>
 

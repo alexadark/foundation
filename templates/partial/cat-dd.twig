@@ -4,7 +4,7 @@
             {#{{ function('select_cat_dropdown', active_cat, 'b2b-marketing' ) }}#}
         </span>
         <select id="cat-select" onchange="location=this.value;">
-            <option value="/the-lab">View All &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="{{ function ('get_permalink', 2194) }}">View All &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
             {% for cat in cats %}
                 <option {{ function('select_cat_dropdown', active_cat, cat.slug ) }} value="/category/{{ cat.slug }}">{{ cat.name }}</option>
         {% endfor %}
