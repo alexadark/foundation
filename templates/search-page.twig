@@ -31,7 +31,7 @@
 
 
         {% for post in posts %}
-            <article>
+            <article index="{{ loop.index }}">
                 {% set postType = post.post_type %}
                 {% set badge = postType == 'post'? post.category: postType == 'service'? 'services' : 'page' %}
                 {% set badgeClass =

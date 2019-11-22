@@ -12,8 +12,8 @@
 $templates = array('search-page.twig', 'archive.twig', 'index.twig');
 
 $context          = Timber::context();
-
-$allsearch = new WP_Query("s=$s&showposts=0");
+$s = get_search_query();
+$allsearch = new WP_Query("s=$s");
 
 $context['search_count'] = $allsearch->found_posts;
 $context['title'] = 'Search results for';
