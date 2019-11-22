@@ -1329,9 +1329,10 @@ body img.gform_ajax_spinner {
 
 .home .featured-services {
   padding: 30px 0 100px;
-  background-image: linear-gradient(#e47a70 50%, #faf5ef 50%); }
-  .home .featured-services__container {
-    padding-bottom: 30px; }
+  background-image: linear-gradient(#e47a70 50%, #faf5ef 50%);
+  /*&__container {
+			padding-bottom: 30px;
+		}*/ }
 
 .home .resources {
   position: relative; }
@@ -2065,7 +2066,7 @@ div.gfield_creditcard_warning_message {
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 40%;
+  top: 44%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -3329,7 +3330,8 @@ section.content-wrapper > div {
       flex-direction: column;
       justify-content: space-between;
       z-index: 10;
-      position: relative; }
+      position: relative;
+      height: 280px !important; }
     .featured-services__item--title {
       font-size: 1.7rem;
       margin: 0 0 10px; }
@@ -3341,7 +3343,9 @@ section.content-wrapper > div {
     color: #0b354c;
     text-transform: uppercase;
     font-family: 'Avenir';
-    font-weight: 500; }
+    font-weight: 500;
+    display: block;
+    margin: 30px 0 10px; }
     .featured-services__link img {
       margin-right: 10px; }
   .featured-services a:hover {

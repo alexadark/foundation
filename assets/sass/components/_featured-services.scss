@@ -114,6 +114,7 @@
 			justify-content: space-between;
 			z-index: 10;
 			position: relative;
+			height:280px!important;
 		}
 		&--title {
 			font-size: 1.7rem;
@@ -130,6 +131,8 @@
 		text-transform: uppercase;
 		font-family: 'Avenir';
 		font-weight: 500;
+		display: block;
+		margin: 30px 0 10px;
 		img {
 			margin-right: 10px;
 		}
