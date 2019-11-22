@@ -367,3 +367,14 @@ function auto_redirect_after_logout()
 	wp_redirect(home_url());
 	exit();
 }
+//seo
+function can_use_SEO() {
+    if (is_admin()) {
+        $roles = array('author', 'contributor', 'editor');
+        foreach($roles as $role) :
+            $role = get_role( 'editor' );
+            if ( is_object( $role ) ) $role->add_cap( 'aiosp_manage_seo' );
+        endforeach;
+    }
+}
+add_action( 'admin_init', 'can_use_SEO', 1 );
