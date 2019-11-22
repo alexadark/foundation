@@ -3415,8 +3415,7 @@ section.content-wrapper > div {
       color: #dd6052; }
 
 .error404 .featured-services {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, transparent), color-stop(8%, #21232b));
-  transform: none; }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, transparent), color-stop(8%, #21232b)); }
 
 .featured-sites {
   padding: 25px 0 100px; }
