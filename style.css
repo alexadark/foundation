@@ -3249,7 +3249,14 @@ section.content-wrapper > div {
   @media only screen and (min-width: 1024px) {
     .featured-services {
       background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #21232b), color-stop(40%, #faf5ef));
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #21232b), color-stop(40%, #faf5ef)); } }
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #21232b), color-stop(40%, #faf5ef)); }
+      .featured-services.dark-bg, .featured-services.bg-black {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, transparent), color-stop(8%, #21232b)); }
+        .featured-services.dark-bg a.featured-services__link, .featured-services.bg-black a.featured-services__link {
+          color: #7db6ef;
+          transition: all 0.4s ease-in-out; }
+          .featured-services.dark-bg a.featured-services__link:hover, .featured-services.bg-black a.featured-services__link:hover {
+            color: #dd6052; } }
   @media only screen and (min-width: 1024px) {
     .featured-services {
       transform: translateY(-62px); }
@@ -3399,12 +3406,12 @@ section.content-wrapper > div {
 .search .featured-services {
   transform: translateY(0); }
 
-.page:not(.home-page) .featured-services.dark-bg {
+.page:not(.home-page) .featured-services.dark-bg, .page:not(.home-page) .featured-services.bg-black {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, transparent), color-stop(8%, #21232b)); }
-  .page:not(.home-page) .featured-services.dark-bg a.featured-services__link {
+  .page:not(.home-page) .featured-services.dark-bg a.featured-services__link, .page:not(.home-page) .featured-services.bg-black a.featured-services__link {
     color: #7db6ef;
     transition: all 0.4s ease-in-out; }
-    .page:not(.home-page) .featured-services.dark-bg a.featured-services__link:hover {
+    .page:not(.home-page) .featured-services.dark-bg a.featured-services__link:hover, .page:not(.home-page) .featured-services.bg-black a.featured-services__link:hover {
       color: #dd6052; }
 
 .error404 .featured-services {

@@ -13,30 +13,32 @@
 	</div>
 </div>
 <div class="featured-services">
-	<div class="featured-services__container">
-		{% for item in options.services %}
+	<div class="wrapper">
+		<div class="featured-services__container">
+			{% for item in options.services %}
 
-		<div class="featured-services__item">
-			<a class="dark-green" href="{{ function('get_permalink', item.ID) }}">
-				<div
-					class="featured-services__item--wrap"
-					style="background:url({{ TimberImage(item.services_background) | e('esc_url')}}) no-repeat left top/cover;"
-				>
-					<div class="featured-services__item--overlay"></div>
-					<div class="featured-services__item--content">
-						<h3 class="featured-services__item--title blod uppercase">
-							{{ item.post_title }}
-						</h3>
-						<div class="featured-services__item--teaser">
-							{{ item.post_excerpt }}
+				<div class="featured-services__item">
+					<a class="dark-green" href="{{ function('get_permalink', item.ID) }}">
+						<div
+								class="featured-services__item--wrap"
+								style="background:url({{ TimberImage(item.services_background) | e('esc_url')}}) no-repeat left top/cover;"
+						>
+							<div class="featured-services__item--overlay"></div>
+							<div class="featured-services__item--content">
+								<h3 class="featured-services__item--title blod uppercase">
+									{{ item.post_title }}
+								</h3>
+								<div class="featured-services__item--teaser">
+									{{ item.post_excerpt }}
+								</div>
+							</div>
+							<img src="{{ theme.path }}/assets/img/arrow-thin.svg" alt="" />
+
 						</div>
-					</div>
-					<img src="{{ theme.path }}/assets/img/arrow-thin.svg" alt="" />
-				
+					</a>
 				</div>
-			</a>
-		</div>
 
-		{% endfor %}
+			{% endfor %}
+		</div>
 	</div>
 </div>

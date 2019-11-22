@@ -11,6 +11,23 @@
 			color-stop(40%, #21232b),
 			color-stop(40%, #faf5ef)
 		);
+		&.dark-bg, &.bg-black {
+			background: -webkit-gradient(
+											linear,
+											left top,
+											left bottom,
+											color-stop(8%, transparent),
+											color-stop(8%, $black)
+			);
+			//background: $black;
+			a.featured-services__link {
+				color: $light-blue;
+				transition: all 0.4s ease-in-out;
+				&:hover {
+					color: $salmon;
+				}
+			}
+		}
 	}
 	@include min-screen($l) {
 		transform: translateY(-62px);
@@ -198,7 +215,7 @@
 }
 .page:not(.home-page) {
 	.featured-services {
-		&.dark-bg {
+		&.dark-bg, &.bg-black {
 			background: -webkit-gradient(
 				linear,
 				left top,
