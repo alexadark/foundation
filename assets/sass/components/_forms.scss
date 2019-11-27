@@ -166,6 +166,7 @@ select:-webkit-autofill:focus {
 	}
 	.mlw_qmn_question{
 		color: $salmon;
+		font-family: $heading-font;
 	}
 	.custom-select {
 		position: relative;
@@ -290,6 +291,9 @@ select:-webkit-autofill:focus {
 	textarea.qsm-question-comment {
 		margin-top: 35px;
 		width:100%!important;
+	}
+	h2 span, span.mlw_qmn_question span{
+		font-weight: 700!important;
 	}
 
 	.styled-checkbox {

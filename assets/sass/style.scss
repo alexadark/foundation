@@ -26,6 +26,21 @@
 		display: none;
 	}
 }
+.single-quiz{
+	.hero-single{
+		min-height: 250px;
+		background: $black;
+		&:after{
+			display: none;
+		}
+	}
+	.hero-meta{
+		visibility: hidden;
+	}
+	.share-bottom, .fixed-social, .nocomments, .related-posts, .booking-form{
+		display: none;
+	}
+}
 
 .single-post {
 	.cta {
