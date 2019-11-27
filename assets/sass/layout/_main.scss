@@ -21,6 +21,7 @@ body {
 
 	padding-top: 30px;
 	position: relative;
+	margin-bottom: 100px;
 	@include max-screen(1600px) {
 		&:before {
 			content: '';
@@ -100,7 +101,7 @@ body {
 		}
 	}
 	.pagination {
-		margin-top: 0px;
+		margin-top: 30px;
 	}
 }
 

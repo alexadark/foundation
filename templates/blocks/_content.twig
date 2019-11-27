@@ -1,6 +1,6 @@
 {% extends "blocks/_block-base.twig" %}
 {% block contentBlock %}
     <div class="content-block {{ class }}">
-        {{ block.content | e('wp_kses_post')}}
+        {{ block.content }}
     </div>
 {% endblock %}

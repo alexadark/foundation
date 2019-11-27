@@ -1,4 +1,5 @@
 import './_fixedMenu.js';
+import './_custom-select.js';
 import './_formLabel.js'
 // import './_lab.js'
 

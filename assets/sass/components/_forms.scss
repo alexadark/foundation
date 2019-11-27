@@ -125,3 +125,241 @@ select:-webkit-autofill:focus {
 		font-size: 1.2rem !important;
 	}
 }
+
+.qsm-quiz-form {
+	padding-bottom: 90px;
+	max-width: 710px;
+	margin: 0 auto;
+	label{
+		color: #666;
+	}
+	.qmn_pagination{
+		padding-bottom: 50px;
+	}
+	.qsm-submit-btn{
+		text-transform: uppercase;
+		background-color: $salmon!important;
+		color: #ffeae1!important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom:0;
+		margin: 0 auto;
+		width: 250px!important;
+	}
+	.quiz_section{
+		input{
+			padding:5px 10px!important;
+		}
+	}
+	.qsm_contact_div{
+		input{
+			padding:5px 10px!important;
+		}
+	}
+	.mlw_qmn_message_before{
+		h2{
+			font-size: 40px;
+			line-height: 50px;
+			color: $salmon;
+		}
+	}
+	.mlw_qmn_question{
+		color: $salmon;
+	}
+	.custom-select {
+		position: relative;
+		width:100%;
+	}
+
+	.custom-select select {
+		display: none; /*hide original SELECT element: */
+	}
+
+	.select-selected {
+		background-color: $light-pink;
+	}
+
+	/* Style the arrow inside the select element: */
+	.select-selected:after {
+		position: absolute;
+		content: "";
+		top: 18px;
+		right: 10px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-color: #000 transparent transparent transparent;
+	}
+
+	/* Point the arrow upwards when the select box is open (active): */
+	.select-selected.select-arrow-active:after {
+		border-color: transparent transparent #000 transparent;
+		top: 11px;
+	}
+
+	/* style the items (options), including the selected item: */
+	.select-items div,.select-selected {
+		color: $black;
+		padding: 8px 16px;
+		border: 1px solid transparent;
+		border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+		cursor: pointer;
+	}
+
+	/* Style items (options): */
+	.select-items {
+		position: absolute;
+		background-color: $light-grey;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 99;
+	}
+
+	/* Hide the items when the select box is closed: */
+	.select-hide {
+		display: none;
+	}
+
+	.select-items div:hover, .same-as-selected {
+		background-color: white;
+	}
+
+	[type="text"]{
+		width:100%!important;
+	}
+	[type="radio"]:checked,
+	[type="radio"]:not(:checked) {
+		position: absolute;
+		left: -9999px;
+	}
+	[type="radio"]:checked + label,
+	[type="radio"]:not(:checked) + label
+	{
+		position: relative;
+		padding-left: 28px;
+		cursor: pointer;
+		line-height: 20px;
+		display: inline-block;
+		color: #666;
+	}
+	[type="radio"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before {
+		content: '';
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 20px;
+		height: 20px;
+		border: 2px solid $salmon;
+		border-radius: 100%;
+		background: #fff;
+	}
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after {
+		content: '';
+		width: 12px;
+		height: 12px;
+		background: $salmon;
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		border-radius: 100%;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+	[type="radio"]:not(:checked) + label:after {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	[type="radio"]:checked + label:after {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	.qmn_radio_answers.mlwRequiredRadio {
+		margin-top: -30px;
+		margin-left: -20px;
+	}
+
+	.qsm_check_answer {
+		margin-left: -3px;
+	}
+	textarea.qsm-question-comment {
+		margin-top: 35px;
+		width:100%!important;
+	}
+
+	.styled-checkbox {
+		position: absolute; // take it out of document flow
+		opacity: 0; // hide it
+
+		& + label {
+			position: relative;
+			cursor: pointer;
+			padding: 0;
+		}
+
+		// Box.
+		& + label:before {
+			border-radius: 3px;
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: text-top;
+			width: 20px;
+			height: 20px;
+			background: white;
+			border:2px solid $salmon;
+		}
+
+		// Box hover
+		&:hover + label:before {
+			background: white;
+		}
+
+		// Box focus
+		&:focus + label:before {
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+		}
+
+		// Box checked
+		&:checked + label:before {
+			background: white;
+		}
+
+		// Disabled state label.
+		&:disabled + label {
+			color: #b8b8b8;
+			cursor: auto;
+		}
+
+		// Disabled box.
+		&:disabled + label:before {
+			box-shadow: none;
+			background: #ddd;
+		}
+
+		// Checkmark. Could be replaced with an image
+		&:checked + label:after {
+			content: '';
+			position: absolute;
+			left: 5px;
+			top: 9px;
+			background: $salmon;
+			width: 2px;
+			height: 2px;
+			box-shadow:
+							2px 0 0 $salmon,
+							4px 0 0 $salmon,
+							4px -2px 0 $salmon,
+							4px -4px 0 $salmon,
+							4px -6px 0 $salmon,
+							4px -8px 0 $salmon;
+			transform: rotate(45deg);
+		}
+	}
+
+}
