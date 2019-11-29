@@ -27,6 +27,7 @@
 	}
 }
 .single-quiz{
+	background: white;
 	.hero-single{
 		min-height: 250px;
 		background: $black;
@@ -37,7 +38,8 @@
 	.hero-meta{
 		visibility: hidden;
 	}
-	.share-bottom, .fixed-social, .nocomments, .related-posts, .booking-form{
+	.share-bottom, .fixed-social, .nocomments, .related-posts, .booking-form,
+	.article-content .tease-post__badge, .cta{
 		display: none;
 	}
 }

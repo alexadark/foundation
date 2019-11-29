@@ -148,6 +148,9 @@ select:-webkit-autofill:focus {
 		width: 250px!important;
 	}
 	.quiz_section{
+		&.quiz_begin{
+			padding:15px 0 0 0;
+		}
 		input{
 			padding:5px 10px!important;
 		}
@@ -283,6 +286,7 @@ select:-webkit-autofill:focus {
 	.qmn_radio_answers.mlwRequiredRadio {
 		margin-top: -30px;
 		margin-left: -20px;
+		margin-bottom: 30px;
 	}
 
 	.qsm_check_answer {
