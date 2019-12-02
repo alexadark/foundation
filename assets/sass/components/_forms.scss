@@ -137,6 +137,7 @@ select:-webkit-autofill:focus {
 		padding-bottom: 50px;
 	}
 	.qsm-submit-btn{
+		transition: $transition4;
 		text-transform: uppercase;
 		background-color: $salmon!important;
 		color: #ffeae1!important;
@@ -146,6 +147,11 @@ select:-webkit-autofill:focus {
 		bottom:0;
 		margin: 0 auto;
 		width: 250px!important;
+		&:hover{
+			box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.75);
+			transform: translateY(-5px) !important;
+			background-color: lighten($salmon, 5%)!important;
+		}
 	}
 	.quiz_section{
 		&.quiz_begin{
@@ -374,7 +380,17 @@ select:-webkit-autofill:focus {
 
 
 }
-
+.qsm-quiz-container.qmn_quiz_container.mlw_qmn_quiz{
+	padding:40px;
+	@include max-screen($s){
+		padding:20px 0;
+	}
+}
+.qmn_results_page{
+	@include max-screen($s){
+		padding:0;
+	}
+}
 .qsm-results-page{
 	text-align: center;
 	background: url('assets/img/thanks.jpg') top center no-repeat #3ea576;
@@ -390,6 +406,7 @@ select:-webkit-autofill:focus {
 		margin-bottom: 0;
 	}
 	a.thanks-button{
+		transition: $transition4;
 		color: white;
 		border-bottom:5px solid $dark-blue;
 		border-radius: 3px;
@@ -404,6 +421,10 @@ select:-webkit-autofill:focus {
 		width:300px;
 		position: relative;
 		margin-top: 40px;
+		&:hover {
+			transform: translateY(-5px) !important;
+			box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.75);
+		}
 		@include max-screen($s){
 			margin-top: 0;
 			width:200px;
