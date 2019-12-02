@@ -128,7 +128,7 @@ select:-webkit-autofill:focus {
 
 .qsm-quiz-form {
 	padding-bottom: 90px;
-	max-width: 710px;
+	max-width: 700px;
 	margin: 0 auto;
 	label{
 		color: #666;
@@ -291,6 +291,7 @@ select:-webkit-autofill:focus {
 
 	.qsm_check_answer {
 		margin-left: -3px;
+		margin-bottom: 3px;
 	}
 	textarea.qsm-question-comment {
 		margin-top: 35px;
@@ -368,6 +369,55 @@ select:-webkit-autofill:focus {
 							4px -8px 0 $salmon;
 			transform: rotate(45deg);
 		}
+
 	}
 
+
+}
+
+.qsm-results-page{
+	text-align: center;
+	background: url('assets/img/thanks.jpg') top center no-repeat #3ea576;
+	color: white;
+	padding: 100px 20px 50px;
+	margin: 30px 0 50px;
+	@include max-screen($s){
+		padding: 20px 20px 50px;
+		margin: 30px 0 50px;
+	}
+	h2{
+		font-size: 4rem;
+		margin-bottom: 0;
+	}
+	a.thanks-button{
+		color: white;
+		border-bottom:5px solid $dark-blue;
+		border-radius: 3px;
+		text-transform: uppercase;
+		font-family: $heading-font;
+		display: inline-block;
+		font-size: 1.4rem;
+		background-color: $blue;
+		cursor: pointer;
+		padding: 15px 30px;
+		text-align: left;
+		width:300px;
+		position: relative;
+		margin-top: 40px;
+		@include max-screen($s){
+			margin-top: 0;
+			width:200px;
+		}
+		&:after{
+			content: url('assets/img/blue-star.jpg');
+			width:36px;
+			height:32px;
+			position: absolute;
+			right:10px;
+			top:10px;
+		}
+	}
+}
+.single-quiz .wrap700{
+	max-width:none;
 }
