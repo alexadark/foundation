@@ -2153,15 +2153,10 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_validate": "",
-                            "acfe_update": "",
-                            "acfe_permissions": "",
                             "post_type": [
                                 "post"
                             ],
-                            "taxonomy": [
-                                "category:resources"
-                            ],
+                            "taxonomy": "",
                             "filters": [
                                 "search",
                                 "post_type",
@@ -2172,10 +2167,7 @@
                             ],
                             "min": "",
                             "max": "",
-                            "return_format": "object",
-                            "acfe_bidirectional": {
-                                "acfe_bidirectional_enabled": "0"
-                            }
+                            "return_format": "object"
                         },
                         {
                             "key": "field_5cde47138c6a3",
@@ -2466,5 +2458,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573223094
+    "modified": 1575568303
 }
