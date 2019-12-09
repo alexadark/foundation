@@ -43,7 +43,11 @@
 		display: none;
 	}
 }
-
+.careers-page .hero{
+	@include max-screen($m) {
+		padding-bottom: 160px !important;
+	}
+}
 .single-post {
 	.cta {
 		display: none;
